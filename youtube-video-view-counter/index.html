@@ -1,0 +1,471 @@
+<html>
+
+<head>
+  <title id="pog">Youtube Video View Counter</title>
+  <meta name="description" content="Customizable.">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../jquery-3.1.1.min.js"></script>
+    <script src="../odometer.js"></script>
+    <script async src="https://arc.io/widget.js#jnEJG9ET"></script>
+  <link rel="stylesheet" href="../odometer.css">
+
+  <link rel="stylesheet" href="https://mixerno.space/bootstrap.css">
+  <script src="https://mixerno.space/bootstrap.js"></script>
+
+  <link rel="stylesheet" href="../global.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+
+</head>
+
+<body onload="FirstLoad2(window.location.href.split('?cid=')[1]);">
+  <center>
+    <div id="randomshitlmao">
+      <div>
+        
+      </div>
+
+    </div><br>
+    <div id="countbox">
+      <img src="../favicon.ico" id="YTbanner" height="150" width="100%" style="object-fit: cover; z-index: 1;">
+      <div class="funstuff">
+        <img src="../favicon.ico" id="YTimg" height="140" width="140"></div>
+      <div id="YTname">Loading username.</div>
+      <div id="YTidentifier">Loading user id.</div>
+      <div id="YTsubs" class="odometer"></div>
+      <div id="thingy">Views</div>
+    </div>
+    <br>
+
+    <div id="countbox2">
+      <div class="grid">
+        <div class="countbox3">
+          <div class="odometer fsize" id="YTgoal">0</div>
+          <div class="fsize2">Goal</div>
+        </div>
+        <div class="countbox3">
+          <div class="odometer fsize" id="YTlikes">0</div>
+          <div class="fsize2">Likes</div>
+        </div>
+        <div class="countbox3">
+          <div class="odometer fsize" id="YTdislikes">0</div>
+          <div class="fsize2">Dislikes</div>
+        </div>
+        <div class="countbox3">
+          <div class="odometer fsize" id="YTcomments">0</div>
+          <div class="fsize2" id="viewsorcomments">Comments</div>
+        </div>
+      </div>
+    </div>
+    <!--<br>
+    <div id="searchpart">
+      <input type="text" id="channelidinput" placeholder="Channel ID"><button id="buotn"
+        onclick="if(document.getElementById('channelidinput').value == ''){}else{changechannel(document.getElementById('channelidinput').value)}">Go</button>
+    </div>
+  
+  
+  window.open(`https://youtube.com/channel/${window.location.href.split('?cid=')[1]}`,'_blank');
+  -->
+    <br>
+    <div id="graph">
+      <div id="GraphFun"></div>
+    </div><br>
+    <div class="buttosn">
+      <div class="grid3">
+        <div>
+          <button id="" data-toggle="modal" data-target="#changeuser"
+            onclick="location.href = `../youtube-video-search`;">Change Video</button>
+        </div>
+        <div>
+          <button id="" data-toggle="modal" data-target="#compare"
+            onclick="location.href = `../compare`;">Compare</button>
+        </div>
+        <div>
+          <button id="" data-toggle="modal" data-target="#compare"
+            onclick="window.open(`https://www.youtube.com/watch?v=${window.location.href.split('?cid=')[1]}`,'_blank');">Visit
+            Page</button>
+        </div>
+        <div>
+          <button id="" data-toggle="modal" data-target="#customize">Customize</button>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="about">
+      <h2>About Video <span id="YTname1x">Loading username.</span></h2>
+      <p id="YTdesc" style="text-align: left;"></p><br><br>
+      <h2>Embed</h2>
+      <input id="embedstuff" type="text" value="here is supposed be text." readonly>
+    </div><br>
+    <div id="disqus_thread"></div>
+    <div style="background-color: rgb(32, 32, 32); color: white;" class="container2">
+      <div class="modal fade" id="customize" role="dialog">
+        <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-dialog">
+          <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-content">
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-header">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+              <h4 class="modal-title">Customize</h4>
+            </div>
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-body">
+
+              <h4>Change Text Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="textclr"></h4><br>
+              <h4>Change Background Color <input style="color:white; background-color:rgb(22,22,22); width: 100%"
+                  type="text" placeholder="color name like green" id="backclr"></h4><br>
+              <h4>Change Box Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="boxclr"></h4><br>
+              <h4>Odometer: Up Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="odoupclr"></h4><br>
+              <h4>Odometer: Down Color <input style="color:white; background-color:rgb(22,22,22); width: 100%"
+                  type="text" placeholder="color name like green" id="ododownclr"></h4><br>
+              <h4>Odometer: Speed <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="seconds like 2 or 0.5" id="odospeedclr"></h4><br>
+              <h4>Font: Font Name <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="some font that is installed" id="fontfamilyclr"></h4><br>
+              <h4>Font: Font Weight <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="100-900" id="fontweightclr"></h4>
+            </div>
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-footer">
+              <button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                id="submitbutton5" data-dismiss="modal">Submit</button><button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                id="submitbutton6" data-dismiss="modal">Reset Changes</button><button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </center>
+</body>
+<style></style>
+<script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  
+  var disqus_config = function () {
+  this.page.url = `${location.href}`  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = `${location.href}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://mixernospace-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+<script src="../customization/cus.js"></script>
+<script src="../customization/checkver.js"></script>
+<script src="../customization/embed.js"></script>
+<script>
+  if (window.location.href.split('?cid=')[1] == undefined) {
+    location.href = `?cid=kJQP7kiw5Fk`
+  }
+  /*
+  $('style').append('.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');
+      
+
+
+  $('style').append('body { font-family: Roboto Regular !important}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner { -webkit-transition: -webkit-transform 2s !important;-moz-transition: -moz-transform 2s !important;-ms-transition: -ms-transform 2s !important;-o-transition: -o-transform 2s !important;transition: transform 2s !important;}');
+        */
+  var graphData;
+  $(document).ready(function () {
+    graphData = new Highcharts.chart('GraphFun', {
+      chart: {
+        backgroundColor: 'transparent',
+        renderTo: GraphFun,
+        type: 'line'
+      },
+      title: {
+        text: `Graph`
+      },
+      xAxis: {
+        type: 'datetime',
+        tickPixelInterval: 500,
+      },
+      yAxis: {
+        title: {
+          text: ''
+        },
+      },
+
+      credits: {
+        enabled: false,
+        text: "Rick astely never gonna give you up video"
+      },
+
+      series: [{
+        showInLegend: false,
+        name: 'Stats',
+        marker: {
+          enabled: false
+        },
+
+      }]
+    })
+  });
+  /*// Get the input field
+  var input = document.getElementById("channelidinput");
+
+  // Execute a function when the user releases a key on the keyboard
+  input.addEventListener("keyup", function (event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("buotn").click();
+    }
+  });*/
+  var estimated = true
+  var stream = true
+  var YT = {
+    setname: function (name) {
+      document.getElementById('YTname').innerHTML = name
+      document.getElementById('YTname1x').innerHTML = name
+    },
+    setpicture: function (url) {
+      document.getElementById('YTimg').src = url
+    },
+    setbanner: function (url) {
+      document.getElementById('YTbanner').src = url
+    },
+    setsubs: function (count) {
+      document.getElementById('YTsubs').innerHTML = count
+    },
+    setdesc: function (count) {
+      document.getElementById('YTdesc').innerHTML = count
+    },
+    setgraphpoint: function (count) {
+      graphData.series[0].addPoint([
+        (new Date()).getTime(),
+        parseFloat(count)
+      ]);
+      if (graphData.series[0].data.length >= 900) {
+        graphData.series[0].data[0].remove()
+      }
+    },
+    setgoal: function (count) {
+      document.getElementById('YTgoal').innerHTML = GetGoal(count);
+    },
+    setlikes: function (count) {
+      document.getElementById('YTlikes').innerHTML = count;
+    },
+    setdislikes: function (count) {
+      document.getElementById('YTdislikes').innerHTML = count;
+    },
+    setcomments: function (count) {
+      document.getElementById('YTcomments').innerHTML = count;
+    },
+    setid: function (count) {
+      document.getElementById('YTidentifier').innerHTML = count;
+    }
+  }
+  function GetGoal(count) {
+    if (count < 10) return 10; var x1 = Math.floor(Math.log10(count)); var x2 = Math.ceil(count / 10 ** x1); var x3 = x2 * 10 ** x1; var goal = x3 - count; return goal
+  }
+  function changechannel(cid) {
+    location.href = `?cid=${cid}`
+  }
+  function FirstLoad(id) {
+    //console.log(id)
+    //'https://beta.mixerno.space/api/youtube/estimated/user/'
+    fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      if (!json.msg) {
+        YT.setname(json.name)
+        console.log(json.description.replace(/↵/g, `\n`))
+
+        YT.setdesc(json.description.replace(/↵/g, `\n`))
+        YT.setsubs(Math.floor(json.SubscriberCount))
+        YT.setgoal(Math.floor(json.SubscriberCount))
+        YT.setgraphpoint(Math.floor(json.SubscriberCount))
+        YT.setpicture(json.image)
+        YT.setbanner(json.banner)
+        YT.setview(json.totalviews)
+        YT.setvideo(json.videos)
+        YT.setid(window.location.href.split('?cid=')[1])
+        StartTheWait()
+      } else {
+        console.log("User is not there.")
+        estimated = false
+        FirstLoad2(window.location.href.split('?cid=')[1])
+
+      }
+
+    }).catch((error) => {
+      console.error('Error:', error);
+    });
+
+  }
+  function FirstLoad2(id) {
+    //console.log(id)sear
+    fetch('https://beta.mixerno.space/api/youtube/videoid/livestreamingDetails/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].liveStreamingDetails) {
+        console.log("Api Error.")
+        stream = false
+        others()
+      } else {
+        if (!json.items[0].liveStreamingDetails.concurrentViewers) {
+          console.log("Api Error.")
+          stream = false
+          others()
+        } else {
+
+          YT.setsubs(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers))
+          YT.setgoal(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+          YT.setgraphpoint(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+          others()
+        }
+      }
+    })
+    function others() {
+
+    }
+    fetch('https://beta.mixerno.space/api/youtube/videoid/statistics/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].statistics.viewCount) {
+        console.log("Api Error.")
+
+      } else {
+        if (stream == true) {
+          document.getElementById('thingy').innerHTML = "Viewers"
+        } else {
+          document.getElementById('thingy').innerHTML = "Views"
+          YT.setsubs(Math.floor(json.items[0].statistics.viewCount))
+          YT.setgoal(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+          YT.setgraphpoint(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+        }
+        YT.setlikes(Math.floor(json.items[0].statistics.likeCount))
+        YT.setdislikes(Math.floor(json.items[0].statistics.dislikeCount))
+        if (stream == true) {
+          viewsorcomments.innerHTML = "Views"
+          YT.setcomments(Math.floor(json.items[0].statistics.viewCount))
+        } else {
+          viewsorcomments.innerHTML = "Comments"
+          YT.setcomments(Math.floor(json.items[0].statistics.commentCount))
+        }
+        StartTheWait()
+      }
+    })
+    //console.log(id)sear
+
+    fetch('https://beta.mixerno.space/api/youtube/videoid/snippet/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].snippet.title) {
+        console.log("Api Error.")
+
+      } else {
+        YT.setname(json.items[0].snippet.title)
+        YT.setpicture(json.items[0].snippet.thumbnails.maxres.url)
+        YT.setbanner(json.items[0].snippet.thumbnails.maxres.url)
+        YT.setid(window.location.href.split('?cid=')[1])
+        YT.setdesc(json.items[0].snippet.description)
+      }
+    })
+
+  }
+  function StartTheWait() {
+    if (estimated == true) {
+      setInterval(function () {
+        fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+          //console.log(data)
+          var json = data
+          if (!json.msg) {
+            YT.setname(json.name)
+            YT.setsubs(Math.floor(json.SubscriberCount))
+            YT.setgoal(Math.floor(json.SubscriberCount))
+            YT.setgraphpoint(Math.floor(json.SubscriberCount))
+            YT.setpicture(json.image)
+            YT.setview(json.totalviews)
+            YT.setvideo(json.videos)
+          } else {
+            console.log("User is not there.")
+          }
+        }).catch((error) => {
+          console.error('Error:', error);
+        });
+      }, 2000);
+    } else {
+      setInterval(function () {
+        if (stream == true) {
+          fetch('https://beta.mixerno.space/api/youtube/videoid/liveStreamingDetails/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            estimated = false
+            if (!json.items[0].liveStreamingDetails) {
+              console.log("Api Error.")
+              if (!json.items[0]) {
+                //False alarm
+
+                stream = true
+              } else {
+                stream = false
+              }
+
+            } else {
+              if (!json.items[0].liveStreamingDetails.concurrentViewers) {
+                console.log("Api Error.")
+                stream = false
+                others()
+              } else {
+
+                YT.setsubs(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers))
+                YT.setgoal(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+                YT.setgraphpoint(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+              }
+            }
+          })
+        }
+        fetch('https://beta.mixerno.space/api/youtube/videoid/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+          //console.log(data)
+          var json = data
+          estimated = false
+          if (!json.items[0].statistics.viewCount) {
+            console.log("Api Error.")
+
+          } else {
+            if (stream == true) {
+              document.getElementById('thingy').innerHTML = "Viewers"
+            } else {
+              document.getElementById('thingy').innerHTML = "Views"
+              YT.setsubs(Math.floor(json.items[0].statistics.viewCount))
+              YT.setgoal(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+              YT.setgraphpoint(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+            }
+            YT.setlikes(Math.floor(json.items[0].statistics.likeCount))
+            YT.setdislikes(Math.floor(json.items[0].statistics.dislikeCount))
+            if (stream == true) {
+              viewsorcomments.innerHTML = "Views"
+              YT.setcomments(Math.floor(json.items[0].statistics.viewCount))
+            } else {
+              viewsorcomments.innerHTML = "Comments"
+              YT.setcomments(Math.floor(json.items[0].statistics.commentCount))
+            }
+          }
+        })
+      }, 3000);
+    }
+
+  }
+</script>
+
+</html>

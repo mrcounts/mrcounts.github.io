@@ -1,0 +1,133 @@
+        
+@font-face {
+    font-family: Roboto Regular;
+      src: url(https://mixerno.space/fonts/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: Roboto Medium;
+      src: url(https://mixerno.space/fonts/Roboto-Medium.ttf);
+  }
+  @font-face {
+    font-family: Roboto Light ;
+      src: url(https://mixerno.space/fonts/Roboto-Light.ttf);
+  }
+  @font-face {
+    font-family: Varela Round;
+      src: url(https://mixerno.space/fonts/VarelaRound-Regular.ttf);
+  }
+  body {
+      margin: 0;
+       background-color: rgb(246, 246, 246);
+      color:white;
+      font-family: Roboto Medium;
+      overflow-x: hidden;
+  }
+  .searchbox,.popusrts {
+      background-color: grey;
+      width: 90%;
+      padding: 10px;
+    border-color: rgba(0, 0, 0, 0.500);
+      border: 0.5px solid rgba(0,0,0,.500);
+      border-radius: .50rem;
+  }
+  #randomshitlmao {
+    background-color: whitesmoke;
+width: 100%;
+height: 70px;
+text-align: center !important;
+font-family: Roboto Regular;
+font-size: 100%;
+color: rgb(255, 255, 255);
+}
+.fhtg {
+    
+  display:flex;
+  align-items:center;
+justify-content: center;
+  
+      text-align: center !important;
+}
+input[type=text]:hover,button:hover,select:hover,option:hover {
+      color:lightblue !important;
+}
+.links {
+  position: absolute;
+  top:0%;
+  left:90% !important;
+  word-spacing: 5px;
+}
+.epiclinks:hover {
+  color: lightblue;
+}
+.epiclinks {
+  color:white;
+  transition: 0.3s;
+}
+   input[type=text],button,select,option {
+      background-color: rgb(22, 22, 22) !important;
+      color:white !important;
+      transition: 0.3s;
+  }
+  button {
+    cursor: pointer;
+  }
+  .grid3 {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+  }
+  .grid3 {
+    grid-template-columns: repeat(5,minmax(0,1fr));
+  }
+  .grid {
+    display: grid;
+    grid-gap: 2px;
+    gap: 2px;
+  }
+.grid {
+    grid-template-columns: repeat( auto-fit, minmax(250px, 2fr) );
+}
+.img {
+  
+  border-radius: 50% !important;
+  border: groove white 1px !important;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#userimg,#userimg2 {
+  border: groove white 1px !important;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#username,#username2 {
+  transition: 0.3s;
+}
+h4 {
+ 
+  cursor: pointer;
+  transition: 0.3s;
+}
+.img:hover {
+  border-color: lightblue !important;
+}
+h4:hover {
+ color:lightblue !important;
+}
+#userimg:hover,#userimg2:hover {
+  border-color: lightblue !important;
+}
+#username:hover,#username2:hover {
+ color:lightblue !important;
+}
+.abox {
+  cursor: pointer;
+}
+.comp-grid {
+  display: grid;
+  grid-gap: 2px;
+  gap: 2px;
+}
+.comp-grid {
+  grid-template-columns: repeat( auto-fit, minmax(400px, 2fr) );
+}

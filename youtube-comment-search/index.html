@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title id="pog">live</title>
+        <meta name="description" content="Customizable.">
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" href="../search.css">
+        <script async src="https://arc.io/widget.js#jnEJG9ET"></script>
+    </head>
+    <body>
+        <center><div id="randomshitlmao">
+            <div>
+            
+        </div>
+        
+        </div><br>
+            <div class="searchbox">
+                <h1>Search an user for the counter: Youtube Live Comment Like Counter</h1> <br><br>
+                <input type="text" placeholder="Comment addresss" id="inpast" style="padding: 20px;
+                background-color: whitesmoke;
+                color: black;
+                -webkit-appearance: button;
+                border-color: rgba(0, 0, 0, 0.500);
+                border: 0.5px solid rgba(0,0,0,.500);
+                border-radius: .50rem;"> <button style="padding: 20px;
+                background-color: whitesmoke;
+                color: black;
+                -webkit-appearance: button;
+                border-color: rgba(0, 0, 0, 0.500);
+                border: 0.5px solid rgba(0,0,0,.500);
+                border-radius: .50rem;" onclick="checkfunct(document.getElementById('inpast').value)">Search</button><br><br>Results: <br>
+                <div>
+                    <div onclick="location.href = `../youtube-comment-like-counter?cid=${document.getElementById('username').title}`;" style="cursor: pointer;">
+                        <img style="object-fit: cover;"  title="You know the rules and so do I." src="../favicon.ico" height="125" width="125" id="userimg"><br>
+                        <span id="username" title="You know the rules and so do I.">Waiting for user input.</span>
+                    </div>
+                </div><br><br>
+                <h2>How to get the comment id?</h2>
+                <h3>You can get the comment id by right clicking on the comments creation date and pressing "copy link address". Then you can put the address in to the search box and it will show you the comment like count! have fun :)</h3>
+            </div>
+            <br>
+            <div class="popusrts">
+                <h2>Popular Comments:</h2>
+                <div class="grid">
+                    <div class="abox"onclick="location.href = `../youtube-comment-like-counter?cid=Ugyb0OkJoZemhn5BD194AaABAg`;">
+                        <img  title="You know the rules and so do I." src="https://yt3.ggpht.com/a/AATXAJzN5VILNY2c5ClvRu2S8jBp4f_ojE4Fq5i_5SABBg=s800-c-k-c0xffffffff-no-rj-mo" height="100" width="100" class="img" id="">
+                        <h4>i'm the bald guy</h4>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+    <style>
+
+    </style>
+    <script>
+function checkfunct(cid) {
+    if(cid.startsWith("https://www.youtube.com/watch") == true) {
+        location.href = `../youtube-comment-like-counter?cid=${cid.split('=')[2]}`;
+    } else {
+        /*fetch('https://beta.mixerno.space/api/youtube/searchvideo/'+cid).then(res => res.json()).then(data => {
+            console.log(data)
+            document.getElementById('username').title = data.videoid
+            document.getElementById('userimg').src = data.items[0].snippet.thumbnails.maxres.url
+                document.getElementById('username').innerHTML = data.items[0].snippet.title
+            
+        })*/
+        location.href = `../youtube-comment-like-counter?cid=${cid}`;
+    }
+}
+    </script>
+</html>
