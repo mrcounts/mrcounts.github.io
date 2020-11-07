@@ -1,1 +1,1 @@
-# this code only works for domain mrstats1.github.io/mrcounts
+# this code only works for domain mrcounts.github.io
