@@ -1,4 +1,3 @@
-        
 @font-face {
     font-family: Roboto Regular;
       src: url(https://mixerno.space/fonts/Roboto-Regular.ttf);
@@ -17,28 +16,53 @@
   }
   body {
       margin: 0;
-       background-color: rgb(246, 246, 246);
+      background-color: rgb(41, 43, 44);
       color:white;
       font-family: Roboto Medium;
       overflow-x: hidden;
   }
   .searchbox,.popusrts {
-      background-color: grey;
+      background-color: rgb(32, 32, 32);
       width: 90%;
       padding: 10px;
-    border-color: rgba(0, 0, 0, 0.500);
+      border-color: rgba(0, 0, 0, 0.500);
       border: 0.5px solid rgba(0,0,0,.500);
       border-radius: .50rem;
   }
+  .popusrts .grid .abox img:hover {
+    width: 150 !important;
+    height: 150 !important;
+    transition: 0.3s;
+  }
+  .popusrts .grid .abox {
+    background-color: rgb(36, 36, 36);
+    padding: 10px;
+    border-color: rgba(0, 0, 0, 0.500);
+    border: 0.5px solid rgba(0,0,0,.500);
+    border-radius: .25rem;
+    max-width: 200px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 150px;
+    transition: 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div.searchbox div div img:hover {
+    width: 150 !important;
+    height: 150 !important;
+    transition: 0.3s;
+  }
   #randomshitlmao {
-    background-color: whitesmoke;
+    background: rgb(0, 0, 0);
 width: 100%;
-height: 70px;
+height: 0px;
 text-align: center !important;
 font-family: Roboto Regular;
 font-size: 100%;
 color: rgb(255, 255, 255);
 }
+
 .fhtg {
     
   display:flex;
@@ -50,11 +74,19 @@ justify-content: center;
 input[type=text]:hover,button:hover,select:hover,option:hover {
       color:lightblue !important;
 }
+button, input {
+  transition: 0.3s;
+}
 .links {
   position: absolute;
+  text-decoration: none;
   top:0%;
   left:90% !important;
   word-spacing: 5px;
+}
+div#randomshitlmao div .links a {
+
+  text-decoration: none;
 }
 .epiclinks:hover {
   color: lightblue;
@@ -85,18 +117,18 @@ input[type=text]:hover,button:hover,select:hover,option:hover {
     gap: 2px;
   }
 .grid {
-    grid-template-columns: repeat( auto-fit, minmax(250px, 2fr) );
+    grid-template-columns: repeat( auto-fit, minmax(200px, 2fr) );
 }
 .img {
   
   border-radius: 50% !important;
-  border: groove white 1px !important;
+  border: groove white 0px !important;
   object-fit: cover;
   cursor: pointer;
   transition: 0.3s;
 }
 #userimg,#userimg2 {
-  border: groove white 1px !important;
+  border: groove white 0px !important;
   border-radius: 50%;
   transition: 0.3s;
 }
@@ -130,4 +162,20 @@ h4:hover {
 }
 .comp-grid {
   grid-template-columns: repeat( auto-fit, minmax(400px, 2fr) );
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(255, 255, 255); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 255, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(36, 36, 36); 
 }
