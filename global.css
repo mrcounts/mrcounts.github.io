@@ -40,7 +40,7 @@
   background: rgb(36, 36, 36); 
 }
 body {
-    font-family: Roboto Regular !important;
+    font-family: Varela Round !important;
     background-color: rgb(41, 43, 44);
     margin: 0;
     overflow-x: hidden;
@@ -66,7 +66,7 @@ body {
   }
 
   #YTsubs,#YTsubs2 {
-    font-size: calc(3.5em + 3vw) !important;
+    font-size: calc(3.2em + 2vw) !important;
     transition: 0.3s;
   }
   #dif {
@@ -231,7 +231,7 @@ transition: 0.3s !important;
     width: 90%;
     transition: 0.3s !important;
   }
-  #countbox,#disqus_thread {
+  #countbox {
     background-color: rgb(32, 32, 32);
     width: 95%;
     padding: 10px;
@@ -239,6 +239,17 @@ transition: 0.3s !important;
     border: 0.5px solid rgba(55,55,55,.500);
     border-radius: .50rem;
     transition: 0.3s !important;
+}
+  #disqus_thread {
+    background-color: rgb(32, 32, 32);
+    width: 95%;
+    padding: 10px;
+    border-color: darkviolet;
+    border: 1px solid darkviolet;
+    border-radius: .50rem;
+    transition: 0.3s !important;
+  }
+
   }
 
   #searchpart,
