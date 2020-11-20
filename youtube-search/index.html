@@ -13,24 +13,26 @@
         </div>
         
         </div><br>
+       
             <div class="searchbox">
-                <h1>Search an user for the counter: Youtube Live Subscriber Counter</h1> <br><br>
-                <input type="text" placeholder="Username or Channel ID" id="inpast" style="padding: 20px;
-                background-color: whitesmoke;
+              <img style="object-fit: cover;"  title="." src="../static/youtube.svg" height="220" width="220" id="sss"><br>
+                <h1> Search Any YouTube User.<h1/> <br><br>
+                <input type="text" placeholder="Username or Channel ID" id="inpast" style="padding: 10px;
+                background-color: black;
                 color: black;
                 -webkit-appearance: button;
                 border-color: rgba(0, 0, 0, 0.500);
                 border: 0.5px solid rgba(0,0,0,.500);
-                border-radius: .50rem;"> <button style="padding: 20px;
-                background-color: whitesmoke;
+                border-radius: .50rem;"> <button style="padding: 10px;
+                background-color: leafgreen;
                 color: black;
                 -webkit-appearance: button;
                 border-color: rgba(0, 0, 0, 0.500);
                 border: 0.5px solid rgba(0,0,0,.500);
-                border-radius: .50rem;" onclick="checkfunct(document.getElementById('inpast').value)">Search</button><br><br>Results: <br>
+                border-radius: .50rem;" onclick="checkfunct(document.getElementById('inpast').value)">Search</button><br><br>Results: <br> 
                 <div>
                     <div onclick="location.href = `../youtube-subscriber-counter?cid=${document.getElementById('username').title}`;" style="cursor: pointer;">
-                        <img style="object-fit: cover;"  title="You know the rules and so do I." src="../static/youtube.svg" height="125" width="125" id="userimg"><br>
+                        <img style="object-fit: cover;"  title="" src="../static/user.svg" height="125" width="125" id="userimg"><br>
                         <span id="username" title="You know the rules and so do I.">Waiting for user input.</span>
                     </div>
                 </div>
