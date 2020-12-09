@@ -290,7 +290,7 @@
   }
   function FirstLoad(id) {
     //console.log(id)
-    fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       if (!json.msg) {
@@ -323,7 +323,7 @@
   }
   function FirstLoad2(id) {
     //console.log(id)sear
-    fetch('https://beta.mixerno.space/api/twitter/tweet/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/twitter/tweet/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -351,7 +351,7 @@
   function StartTheWait() {
     if (estimated == true) {
       setInterval(function () {
-        fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+        fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           if (!json.msg) {
@@ -371,7 +371,7 @@
       }, 2000);
     } else {
       setInterval(function () {
-        fetch('https://beta.mixerno.space/api/twitter/tweet/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+        fetch('https://api.mixerno.space/twitter/tweet/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           estimated = false

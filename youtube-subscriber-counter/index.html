@@ -289,8 +289,8 @@
   var avg = [];
   function FirstLoad(id) {
     //console.log(id)
-    //fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
-    fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
+    //fetch('https://api.mixerno.space/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       if (!json.msg) {
@@ -325,7 +325,7 @@
   }
   function FirstLoad2(id) {
     //console.log(id)sear
-    fetch('https://beta.mixerno.space/api/youtube/channels/statistics/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/channels/statistics/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -339,7 +339,7 @@
         StartTheWait()
       }
     })
-    fetch('https://beta.mixerno.space/api/youtube/channels/snippet/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/channels/snippet/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -353,7 +353,7 @@
         YT.setdesc(json.items[0].snippet.description)
       }
     })
-    fetch('https://beta.mixerno.space/api/youtube/channels/background/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/channels/background/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -370,8 +370,8 @@
   function StartTheWait() {
     if (estimated == true) {
       setInterval(function () {
-    //fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
-    fetch('https://beta.mixerno.space/api/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+    //fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+    fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           if (!json.msg) {
@@ -408,7 +408,7 @@
       }, 2000);
     } else {
       setInterval(function () {
-        fetch('https://beta.mixerno.space/api/youtube/channels/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+        fetch('https://api.mixerno.space/youtube/channels/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           estimated = false
