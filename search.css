@@ -1,18 +1,18 @@
 @font-face {
     font-family: Roboto Regular;
-      src: url(https://mixerno.space/fonts/Roboto-Regular.ttf);
+      src: url(fonts/Roboto-Regular.ttf);
   }
   @font-face {
     font-family: Roboto Medium;
-      src: url(https://mixerno.space/fonts/Roboto-Medium.ttf);
+      src: url(fonts/Roboto-Medium.ttf);
   }
   @font-face {
     font-family: Roboto Light ;
-      src: url(https://mixerno.space/fonts/Roboto-Light.ttf);
+      src: url(fonts/Roboto-Light.ttf);
   }
   @font-face {
     font-family: Varela Round;
-      src: url(https://mixerno.space/fonts/VarelaRound-Regular.ttf);
+      src: url(VarelaRound-Regular.ttf);
   }
   body {
       margin: 0;
