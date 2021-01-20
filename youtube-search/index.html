@@ -97,8 +97,8 @@ function checkfunct(cid) {
             console.log(data)
             if(data.channelid) {
                 document.getElementById('username').title = data.channelid
-            fetch('https://mgcounts-api.ajd3.repl.co/YTChannels/'+data.channelid).then(res => res.json()).then(data => {
-                document.getElementById('userimg').src = data.items[0].snippet.thumbnails.high.url
+            fetch('https://mgcounts-api.ajd3.repl.co/YTChannels/'+data.items[0].data.channelId).then(res => res.json()).then(data => {
+                document.getElementById('userimg').src = data.items[0].snippet.thumbnails.default.url
                 document.getElementById('username').innerHTML = data.items[0].snippet.title
             })
             } else {
