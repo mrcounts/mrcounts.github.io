@@ -93,11 +93,11 @@ function checkfunct(cid) {
     if(cid.startsWith("UC") == true) {
         location.href = `../youtube-subscriber-counter?cid=${cid}`;
     } else {
-        fetch('https://mixerno.space/api/youtube/search/'+cid).then(res => res.json()).then(data => {
+        fetch('https://mixerno.space/api/yt/search/'+cid).then(res => res.json()).then(data => {
             console.log(data)
             if(data.channelid) {
                 document.getElementById('username').title = data.channelid
-fetch('https://mixerno.space/api/youtube/search/'+data.items[0].snippet.channelId).then(res => res.json()).then(data => {
+fetch('https://mixerno.space/api/yt/search/'+data.items[0].snippet.channelId).then(res => res.json()).then(data => {
                 document.getElementById('userimg').src = data.items[0].snippet.thumbnails.default.url
                 document.getElementById('username').innerHTML = data.items[0].snippet.title
             })
