@@ -365,7 +365,7 @@
     })
     //console.log(id)sear
 
-    fetch('https://api.mixerno.space/youtube/videoid/snippet/' + id).then(res => res.json()).then(data => {
+    fetch('https://api.mgcounts.com/youtube/videos/'+ID+'', { mode: "cors" })
       //console.log(data)
       var json = data
       estimated = false
