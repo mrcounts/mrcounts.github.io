@@ -279,7 +279,7 @@
   function FirstLoad(id) {
     //console.log(id)
     //'https://api.mixerno.space/youtube/estimated/user/'
-    fetch('https://api.mixerno.space/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
+    fetch('https://mixerno.space/youtube/estimated/user/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       if (!json.msg) {
@@ -310,7 +310,7 @@
   }
   function FirstLoad2(id) {
     //console.log(id)sear
-    fetch('https://api.mixerno.space/youtube/videoid/livestreamingDetails/' + id).then(res => res.json()).then(data => {
+    fetch('https://mixerno.space/youtube/videoid/livestreamingDetails/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -335,7 +335,7 @@
     function others() {
 
     }
-    fetch('https://api.mixerno.space/youtube/videoid/statistics/' + id).then(res => res.json()).then(data => {
+    fetch('https://mixerno.space/youtube/videoid/statistics/' + id).then(res => res.json()).then(data => {
       //console.log(data)
       var json = data
       estimated = false
@@ -385,7 +385,7 @@
   function StartTheWait() {
     if (estimated == true) {
       setInterval(function () {
-        fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+        fetch('https://mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           if (!json.msg) {
@@ -406,7 +406,7 @@
     } else {
       setInterval(function () {
         if (stream == true) {
-          fetch('https://api.mixerno.space/youtube/videoid/liveStreamingDetails/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+          fetch('https://mixerno.space/youtube/videoid/liveStreamingDetails/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
             //console.log(data)
             var json = data
             estimated = false
@@ -434,7 +434,7 @@
             }
           })
         }
-        fetch('https://api.mixerno.space/youtube/videoid/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+        fetch('https://mixerno.space/youtube/videoid/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
           //console.log(data)
           var json = data
           estimated = false
