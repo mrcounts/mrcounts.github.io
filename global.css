@@ -41,7 +41,7 @@
 }
 body {
     font-family: Varela Round !important;
-    background-color: rgb(41, 43, 44);
+    background-color: black;
     margin: 0;
     overflow-x: hidden;
     overflow-x: hidden;
@@ -208,7 +208,7 @@ transition: 0.3s !important;
   #channelidinput,
   #buotn {
     padding: 5px;
-    background-color: rgb(246, 246, 246);
+    background-color: black;
     font-size: 20px;
     color: white;
     border: groove white 1px;
@@ -232,7 +232,7 @@ transition: 0.3s !important;
     transition: 0.3s !important;
   }
   #countbox {
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 95%;
     padding: 10px;
     border-color: rgba(55, 55, 55, 0.500);
@@ -241,7 +241,7 @@ transition: 0.3s !important;
     transition: 0.3s !important;
 }
   #disqus_thread {
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 95%;
     padding: 10px;
     border-color: darkviolet;
@@ -254,7 +254,7 @@ transition: 0.3s !important;
 
   #searchpart,
   #graph,.buttosn {
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 90%;
     padding: 10px;
     border-color: rgba(55, 55, 55, 0.500);
@@ -263,7 +263,7 @@ transition: 0.3s !important;
     transition: 0.3s !important;
   }
   .diffrne {
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 90%;
     padding: 10px;
     border-color: rgba(55, 55, 55, 0.500);
@@ -273,7 +273,7 @@ transition: 0.3s !important;
   }
   button {
     padding: 10px !important;
-    background-color: rgb(32, 32, 32) !important;
+    background-color: black !important;
     color: white !important;
     -webkit-appearance: button !important;
     border-color: red !important;
@@ -298,7 +298,7 @@ transition: 0.3s !important;
   }
   .buton {
     padding: 20px !important;
-    background-color: rgb(32, 32, 32) !important;
+    background-color: black !important;
     color: white !important;
     -webkit-appearance: button !important;
     border-color: rgba(55, 55, 55, 0.500) !important;
@@ -333,7 +333,7 @@ transition: 0.3s !important;
   .countbox3 {
     margin: 0;
     padding: 10px;
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 100%;
     border-color: rgba(55, 55, 55, 0.500);
     border: 0.5px solid rgba(55,55,55,.500);
@@ -356,7 +356,7 @@ transition: 0.3s !important;
   .countbox3x {
     margin: 0;
     padding: 10px;
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     width: 100%;
     border-color: rgba(55, 55, 55, 0.500);
     border: 0.5px solid rgba(55,55,55,.500);
@@ -374,7 +374,7 @@ transition: 0.3s !important;
     width: 90%;
     padding: 10px;
     text-align: center;
-    background-color: rgb(32, 32, 32);
+    background-color: black;
     font-weight: 100 !important;
     border-color: lightgreen;
     border: 0.5px solid lightgreen;
