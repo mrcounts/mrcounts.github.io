@@ -16,13 +16,13 @@
   }
   body {
       margin: 0;
-      background-color: rgb(41, 43, 44);
+      background-color: black;
       color:white;
       font-family: Roboto Medium;
       overflow-x: hidden;
   }
   .searchbox,.popusrts {
-      background-color: rgb(32, 32, 32);
+      background-color: black;
       width: 90%;
       padding: 10px;
       border-color: rgba(0, 0, 0, 0.500);
@@ -35,7 +35,7 @@
     transition: 0.3s;
   }
   .popusrts .grid .abox {
-    background-color: rgb(36, 36, 36);
+    background-color: black;
     padding: 10px;
     border-color: rgba(0, 0, 0, 0.500);
     border: 0.5px solid rgba(0,0,0,.500);
@@ -60,7 +60,7 @@ height: 0px;
 text-align: center !important;
 font-family: Roboto Regular;
 font-size: 100%;
-color: rgb(255, 255, 255);
+color: black;
 }
 
 .fhtg {
