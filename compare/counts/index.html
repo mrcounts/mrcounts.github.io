@@ -1,0 +1,2271 @@
+<html>
+
+<head>
+  <title id="pog">Mixerno.Space | Compare</title>
+  <meta name="description" content="Customizable.">
+  <link rel="shortcut icon" href="../../favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="../../jquery-3.1.1.min.js"></script>
+  <script src="../../odometer.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <link rel="stylesheet" href="../../odometer.css">
+
+  <link rel="stylesheet" href="https://mixerno.space/bootstrap.css">
+  <script src="https://mixerno.space/bootstrap.js"></script>
+
+  <link rel="stylesheet" href="../../global.css">
+
+  <script async src="https://arc.io/widget.js#jnEJG9ET"></script>
+</head>
+
+<body onload="FirstLoad();FirstLoad2();">
+  <center>
+    <div id="randomshitlmao">
+      <div>
+        <div class="fhtg"><img src="../../favicon.ico" height="75" width="75"><span style="font-weight: 400;"><a
+              style="color:white; text-decoration: none;" href="../">Mixerno.Space</a></span></div>
+        <div class="links">
+          <a class="epiclinks" href="https://twitter.com/mixernospace">Twitter</a> <br>
+          <a class="epiclinks" href="https://discord.gg/KAB6222">Discord</a> <br>
+          <a class="epiclinks" href="../../compare">Compare</a>
+        </div>
+      </div>
+
+    </div><br>
+    <div class="difgrid">
+      <div id="countbox" style="width: 100%;">
+        <img src="../../favicon.ico" id="YTbanner" height="150" width="100%" style="object-fit: cover; z-index: 1;">
+        <div class="funstuff">
+          <img src="../../favicon.ico" id="YTimg" height="140" width="140"></div>
+        <div id="YTname">Mixerno.Space | Loading username.</div>
+        <div id="YTidentifier">Mixerno.Space | Loading user id.</div>
+        <div id="YTsubs" class="odometer"></div>
+        <div id="thingy">Subscribers</div>
+      </div>
+      <div id="countbox" style="width: 100%;">
+        <img src="../../favicon.ico" id="YTbanner2" height="150" width="100%" style="object-fit: cover; z-index: 1;">
+        <div class="funstuff">
+          <img src="../../favicon.ico" id="YTimg2" height="140" width="140"></div>
+        <div id="YTname2">Mixerno.Space | Loading username.</div>
+        <div id="YTidentifier2">Mixerno.Space | Loading user id.</div>
+        <div id="YTsubs2" class="odometer"></div>
+        <div id="thingy2">Subscribers</div>
+      </div>
+    </div>
+
+    <br>
+    <!--<br>
+    <div id="searchpart">
+      <input type="text" id="channelidinput" placeholder="Channel ID"><button id="buotn"
+        onclick="if(document.getElementById('channelidinput').value == ''){}else{changechannel(document.getElementById('channelidinput').value)}">Go</button>
+    </div>
+  
+  
+  window.open(`https://youtube.com/channel/${window.location.href.split('?cid=')[1]}`,'_blank');
+  -->
+
+
+    <div class="diffrne">
+      <div id="dif" class="odometer">0</div>
+      <div>Diffrence</div>
+    </div>
+    <br>
+    <div id="graph">
+      <div id="GraphFun"></div>
+    </div><br>
+    <div class="buttosn">
+      <div class="grid3">
+        <div>
+          <button id="" data-toggle="modal" data-target="#changeuser" onclick="location.href = `../`;">Change
+            Users</button>
+        </div>
+        <div>
+          <button id="" data-toggle="modal" data-target="#customize">Customize</button>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="about">
+      <h2>About user <span id="YTname1x">Mixerno.Space | Loading username.</span></h2>
+      <p id="YTdesc" style="text-align: left;"></p><br><br>
+      <h2>About user <span id="YTname2x">Mixerno.Space | Loading username.</span></h2>
+      <p id="YTdesc2" style="text-align: left;"></p>
+    </div><br>
+    <div id="disqus_thread"></div>
+
+    <div style="background-color: rgb(32, 32, 32); color: white;" class="container2">
+      <div class="modal fade" id="customize" role="dialog">
+        <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-dialog">
+          <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-content">
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-header">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+              <h4 class="modal-title">Customize</h4>
+            </div>
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-body">
+
+              <h4>Change Text Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="textclr"></h4><br>
+              <h4>Change Background Color <input style="color:white; background-color:rgb(22,22,22); width: 100%"
+                  type="text" placeholder="color name like green" id="backclr"></h4><br>
+              <h4>Change Box Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="boxclr"></h4><br>
+              <h4>Odometer: Up Color <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="color name like green" id="odoupclr"></h4><br>
+              <h4>Odometer: Down Color <input style="color:white; background-color:rgb(22,22,22); width: 100%"
+                  type="text" placeholder="color name like green" id="ododownclr"></h4><br>
+              <h4>Odometer: Speed <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="seconds like 2 or 0.5" id="odospeedclr"></h4><br>
+              <h4>Font: Font Name <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="some font that is installed" id="fontfamilyclr"></h4><br>
+              <h4>Font: Font Weight <input style="color:white; background-color:rgb(22,22,22); width: 100%" type="text"
+                  placeholder="100-900" id="fontweightclr"></h4>
+            </div>
+            <div style="background-color: rgb(32, 32, 32); color: white;" class="modal-footer">
+              <button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                id="submitbutton5" data-dismiss="modal">Submit</button><button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                id="submitbutton6" data-dismiss="modal">Reset Changes</button><button type="button"
+                style="background-color: rgb(32, 32, 32); color: white; border: solid 1px;border-color: rgb(46, 46, 46);"
+                data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </center>
+</body>
+<style></style>
+<script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+  var disqus_config = function () {
+    this.page.url = `${location.href}`  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = `${location.href}`; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://mixernospace-1.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<script src="../../customization/cus.js"></script>
+<script src="../../customization/checkver.js"></script>
+<script>
+
+  /*
+  $('style').append('.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');
+      
+
+
+  $('style').append('body { font-family: Roboto Regular !important}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner { -webkit-transition: -webkit-transform 0.5s !important;-moz-transition: -moz-transform 0.5s !important;-ms-transition: -ms-transform 0.5s !important;-o-transition: -o-transform 0.5s !important;transition: transform 0.5s !important;}');$('style').append('.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner { -webkit-transition: -webkit-transform 2s !important;-moz-transition: -moz-transform 2s !important;-ms-transition: -ms-transform 2s !important;-o-transition: -o-transform 2s !important;transition: transform 2s !important;}');
+        */
+  var graphData;
+  $(document).ready(function () {
+    graphData = new Highcharts.chart('GraphFun', {
+      chart: {
+        backgroundColor: 'transparent',
+        renderTo: GraphFun,
+        type: 'line'
+      },
+      title: {
+        text: `Graph`
+      },
+      xAxis: {
+        type: 'datetime',
+        tickPixelInterval: 500,
+      },
+      yAxis: {
+        title: {
+          text: ''
+        },
+      },
+
+      credits: {
+        enabled: false,
+        text: "Mixerno.Space"
+      },
+
+      series: [{
+        showInLegend: false,
+        name: 'Stats',
+        marker: {
+          enabled: false
+        },
+
+      }]
+    })
+  });
+  /*// Get the input field
+  var input = document.getElementById("channelidinput");
+
+  // Execute a function when the user releases a key on the keyboard
+  input.addEventListener("keyup", function (event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("buotn").click();
+    }
+  });*/
+  var elements1 = {
+    setname: function (name) {
+      document.getElementById('YTname').innerHTML = name
+      document.getElementById('YTname1x').innerHTML = name
+    },
+    setpicture: function (url) {
+      document.getElementById('YTimg').src = url
+    },
+    setbanner: function (url) {
+      document.getElementById('YTbanner').src = url
+    },
+    setsubs: function (count) {
+      document.getElementById('YTsubs').innerHTML = Math.floor(count)
+      count1 = Math.floor(count)
+    },
+    setdesc: function (count) {
+      document.getElementById('YTdesc').innerHTML = count
+    },
+    setid: function (count) {
+      document.getElementById('YTidentifier').innerHTML = count;
+    },
+    setthing: function (count) {
+      document.getElementById('thingy').innerHTML = count;
+    }
+  }
+  var elements2 = {
+    setname: function (name) {
+      document.getElementById('YTname2').innerHTML = name
+      document.getElementById('YTname2x').innerHTML = name
+    },
+    setpicture: function (url) {
+      document.getElementById('YTimg2').src = url
+    },
+    setbanner: function (url) {
+      document.getElementById('YTbanner2').src = url
+    },
+    setsubs: function (count) {
+      document.getElementById('YTsubs2').innerHTML = Math.floor(count)
+      count2 = Math.floor(count)
+    },
+    setdesc: function (count) {
+      document.getElementById('YTdesc2').innerHTML = count
+    },
+    setid: function (count) {
+      document.getElementById('YTidentifier2').innerHTML = count;
+    },
+    setthing: function (count) {
+      document.getElementById('thingy2').innerHTML = count;
+    }
+  }
+  var count1 = 0;
+  var count2 = 0;
+
+  function FirstLoad() {
+
+    if (window.location.href.split('&=')[1] == "ytuser") {
+      elements1.setthing("Subscribers")
+      fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements1.setsubs(data.SubscriberCount)
+          elements1.setname(data.name)
+          elements1.setid(data.cid)
+          elements1.setpicture(data.image)
+          elements1.setbanner(data.banner)
+          elements1.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements1.setsubs(data.SubscriberCount)
+                elements1.setname(data.name)
+                elements1.setid(data.cid)
+                elements1.setpicture(data.image)
+                elements1.setbanner(data.banner)
+                elements1.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].statistics) {
+              elements1.setsubs(data.items[0].statistics.subscriberCount)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+                  if (data.items[0].statistics) {
+                    elements1.setsubs(data.items[0].statistics.subscriberCount)
+                    elements1.setid(window.location.href.split('&=')[3])
+                  }
+                })
+              }, 10000);
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/snippet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+
+              elements1.setname(data.items[0].snippet.title)
+              elements1.setpicture(data.items[0].snippet.thumbnails.high.url)
+              elements1.setdesc(data.items[0].snippet.description)
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/background/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+              elements1.setbanner(data.items[0].brandingSettings.image.bannerImageUrl)
+            }
+          })
+        }
+      })
+    } else   if (window.location.href.split('&=')[1] == "ytuserview") {
+      elements1.setthing("Total Views")
+      fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements1.setsubs(data.totalviews)
+          elements1.setname(data.name)
+          elements1.setid(data.cid)
+          elements1.setpicture(data.image)
+          elements1.setbanner(data.banner)
+          elements1.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements1.setsubs(data.totalviews)
+                elements1.setname(data.name)
+                elements1.setid(data.cid)
+                elements1.setpicture(data.image)
+                elements1.setbanner(data.banner)
+                elements1.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].statistics) {
+              elements1.setsubs(data.items[0].statistics.viewCount)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+                  if (data.items[0].statistics) {
+                    elements1.setsubs(data.items[0].statistics.viewCount)
+                    elements1.setid(window.location.href.split('&=')[3])
+                  }
+                })
+              }, 20000);
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/snippet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+
+              elements1.setname(data.items[0].snippet.title)
+              elements1.setpicture(data.items[0].snippet.thumbnails.high.url)
+              elements1.setdesc(data.items[0].snippet.description)
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/background/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+              elements1.setbanner(data.items[0].brandingSettings.image.bannerImageUrl)
+            }
+          })
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "ytvideo") {
+
+      elements1.setthing("Views")
+      fetch('https://' + document.domain + '/api/youtube/videoid/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.items[0].statistics) {
+          elements1.setsubs(data.items[0].statistics.viewCount)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/videoid/statistics/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.items[0].statistics) {
+                elements1.setsubs(data.items[0].statistics.viewCount)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 10000);
+        }
+      })
+      fetch('https://' + document.domain + '/api/youtube/videoid/snippet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.items[0].snippet) {
+
+          elements1.setname(data.items[0].snippet.title)
+          elements1.setpicture(data.items[0].snippet.thumbnails.high.url)
+          elements1.setdesc(data.items[0].snippet.description)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "ytcomment") {
+      elements1.setthing("Likes")
+      fetch('https://' + document.domain + '/api/youtube/comments/snippet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.items[0].snippet) {
+          elements1.setsubs(data.items[0].snippet.likeCount)
+          elements1.setname(data.items[0].snippet.textOriginal)
+          elements1.setpicture(data.items[0].snippet.authorProfileImageUrl)
+          elements1.setdesc(data.items[0].snippet.textDisplay)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/comments/snippet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.items[0].snippet) {
+                elements1.setsubs(data.items[0].snippet.likeCount)
+                elements1.setname(data.items[0].snippet.textOriginal)
+                elements1.setpicture(data.items[0].snippet.authorProfileImageUrl)
+                elements1.setdesc(data.items[0].snippet.textDisplay)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 10000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "redditsubreddit") {
+      elements1.setthing("Subscribers")
+      fetch('https://api.reddit.com/r/' + window.location.href.split('&=')[3] + '/about').then(res => res.json()).then(data => {
+        if (data.data) {
+          elements1.setsubs(data.data.subscribers)
+          elements1.setname(data.data.title)
+          elements1.setpicture(data.data.icon_img)
+          elements1.setdesc(data.data.description)
+          elements1.setbanner(data.data.banner_img)
+          setInterval(function () {
+            fetch('https://api.reddit.com/r/' + window.location.href.split('&=')[3] + '/about').then(res => res.json()).then(data => {
+              if (data.data) {
+                elements1.setsubs(data.data.subscribers)
+                elements1.setname(data.data.title)
+                elements1.setpicture(data.data.icon_img)
+                elements1.setdesc(data.data.description)
+                elements1.setbanner(data.data.banner_img)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "twitteruser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/twitter/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.followers) {
+          elements1.setsubs(data.followers)
+          elements1.setname(data.fullname)
+          elements1.setpicture(data.pfp)
+          elements1.setdesc(data.description)
+          elements1.setbanner(data.pfpbackground)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitter/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.followers) {
+                elements1.setsubs(data.followers)
+                elements1.setname(data.fullname)
+                elements1.setpicture(data.pfp)
+                elements1.setdesc(data.description)
+                elements1.setbanner(data.pfpbackground)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "twittertweet") {
+      elements1.setthing("Likes")
+      fetch('https://' + document.domain + '/api/twitter/tweet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.favorite_count) {
+          elements1.setsubs(data.favorite_count)
+          elements1.setname(data.text)
+          //elements1.setpicture(data.pfp)
+          elements1.setdesc(data.text)
+          //elements1.setbanner(data.pfpbackground)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitter/tweet/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.favorite_count) {
+                elements1.setsubs(data.favorite_count)
+                elements1.setname(data.text)
+                //elements1.setpicture(data.pfp)
+                elements1.setdesc(data.text)
+                //elements1.setbanner(data.pfpbackground)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "twitchuser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/twitch/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.channels[0]) {
+          elements1.setsubs(data.channels[0].followers)
+          elements1.setname(data.channels[0].display_name)
+          elements1.setpicture(data.channels[0].logo)
+          elements1.setdesc(data.channels[0].description)
+          elements1.setbanner(data.channels[0].profile_banner)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitch/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.channels[0]) {
+                elements1.setsubs(data.channels[0].followers)
+                elements1.setname(data.channels[0].display_name)
+                elements1.setpicture(data.channels[0].logo)
+                elements1.setdesc(data.channels[0].description)
+                elements1.setbanner(data.channels[0].profile_banner)
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "ecosia") {
+      elements1.setthing("Trees")
+      fetch('https://cors.mixerno.space/https://api.ecosia.org/v1/trees/count').then(res => res.json()).then(data => {
+        if (data.count) {
+          elements1.setsubs(data.count)
+          elements1.setname("Ecosia")
+          elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://api.ecosia.org/v1/trees/count').then(res => res.json()).then(data => {
+              if (data.count) {
+                elements1.setsubs(data.count)
+                elements1.setname("Ecosia")
+                elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "globalclicker") {
+      elements1.setthing("Clicks")
+      fetch('https://cors.mixerno.space/http://global-clicker.mrcode.io/getpoints').then(res => res.json()).then(data => {
+        if (data) {
+          elements1.setsubs(data)
+          elements1.setname("Global Clicker")
+          elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/http://global-clicker.mrcode.io/getpoints').then(res => res.json()).then(data => {
+              if (data) {
+                elements1.setsubs(data)
+                elements1.setname("Global Clicker")
+                elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements1.setid(window.location.href.split('&=')[3])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "tiktokuser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/tiktok/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements1.setsubs(data.SubscriberCount)
+          elements1.setname(data.name)
+          elements1.setid(data.cid)
+          elements1.setpicture(data.image)
+          //elements1.setbanner(data.banner)
+          elements1.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/tiktok/estimated/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements1.setsubs(data.SubscriberCount)
+                elements1.setname(data.name)
+                elements1.setid(data.cid)
+                elements1.setpicture(data.image)
+                //elements1.setbanner(data.banner)
+                elements1.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/tiktok/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+            if (data.name) {
+              elements1.setsubs(data.followers)
+              elements1.setname(data.name)
+              elements1.setpicture(data.avatarurl)
+              elements1.setdesc(data.description)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/tiktok/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+                  if (data.name) {
+                    elements1.setsubs(data.followers)
+                    elements1.setname(data.name)
+                    elements1.setpicture(data.avatarurl)
+                    elements1.setdesc(data.description)
+                    elements1.setid(window.location.href.split('&=')[3])
+                  }
+                })
+              }, 10000);
+            }
+          })
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "mcvisit") {
+      elements1.setthing("Visits")
+      fetch('https://' + document.domain + '/api/mcvisit/server/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements1.setsubs(data.visits)
+          elements1.setname(data.name)
+          elements1.setid(data.ip)
+          elements1.setpicture(data.icon)
+          //elements2.setbanner(data.banner)
+          elements1.setdesc(data.name)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mcvisit/server/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements1.setsubs(data.visits)
+                elements1.setname(data.name)
+                elements1.setid(data.ip)
+                elements1.setpicture(data.icon)
+                //elements2.setbanner(data.banner)
+                elements1.setdesc(data.name)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "robloxuser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/roblox/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.followers) {
+          elements1.setsubs(data.followers)
+          elements1.setname(data.name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setpicture(data.pfp)
+          //elements1.setbanner(data.banner)
+          //elements1.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/roblox/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.followers) {
+                elements1.setsubs(data.followers)
+                elements1.setname(data.name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setpicture(data.pfp)
+                //elements1.setbanner(data.banner)
+                //elements1.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "robloxgame") {
+      elements1.setthing("Visits")
+      fetch('https://cors.mixerno.space/https://games.roblox.com/v1/games?universeIds=' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.data[0].visits) {
+          elements1.setsubs(data.data[0].visits)
+          elements1.setname(data.data[0].name)
+          elements1.setid(window.location.href.split('&=')[3])
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=' + window.location.href.split('&=')[3] + '&size=768x432&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements1.setbanner(json.data[0].thumbnails[0].imageUrl)
+            }
+          })
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/games/icons?universeIds=' + window.location.href.split('&=')[3] + '&size=512x512&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements1.setpicture(json.data[0].imageUrl)
+            }
+          })
+          elements1.setdesc(data.data[0].description)
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://games.roblox.com/v1/games?universeIds=' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements1.setsubs(data.data[0].visits)
+                elements1.setname(data.data[0].name)
+                elements1.setid(window.location.href.split('&=')[3])
+                //elements1.setbanner(data.banner)
+                elements1.setdesc(data.data[0].description)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "robloxgroup") {
+      elements1.setthing("Members")
+      fetch('https://cors.mixerno.space/https://groups.roblox.com/v1/groups/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.memberCount) {
+          elements1.setsubs(data.memberCount)
+          elements1.setname(data.name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.description)
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/groups/icons?groupIds=' + window.location.href.split('&=')[3] + '&size=420x420&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements1.setpicture(json.data[0].imageUrl)
+              elements1.setbanner(json.data[0].imageUrl)
+            }
+          })
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://groups.roblox.com/v1/groups/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.memberCount) {
+                elements1.setsubs(data.memberCount)
+                elements1.setname(data.name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.description)
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "storyfireuser") {
+      elements1.setthing("Followers")
+      fetch('https://storyfire.com/app/users/getProfile/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.followersCount) {
+          elements1.setsubs(data.followersCount)
+          elements1.setname(data.username)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.bio)
+          elements1.setpicture(data.userimage)
+          elements1.setbanner(data.userimage)
+          setInterval(function () {
+            fetch('https://storyfire.com/app/users/getProfile/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.memberCount) {
+                elements1.setsubs(data.followersCount)
+                elements1.setname(data.username)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.bio)
+                elements1.setpicture(data.userimage)
+                elements1.setbanner(data.userimage)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "storyfirevideo") {
+      elements1.setthing("Views")
+      fetch('https://storyfire.com/app/videoDetail/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.video.views) {
+          elements1.setsubs(data.video.views)
+          elements1.setname(data.video.title)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.video.description)
+          elements1.setpicture(data.video.storyImage)
+          elements1.setbanner(data.video.storyImage)
+          setInterval(function () {
+            fetch('https://storyfire.com/app/videoDetail/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.video.views) {
+                elements1.setsubs(data.video.views)
+                elements1.setname(data.video.title)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.video.description)
+                elements1.setpicture(json.video.storyImage)
+                elements1.setbanner(data.video.storyImage)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "mee6user") {
+      elements1.setthing("XP")
+      fetch('https://' + document.domain + '/api/mee6/' + window.location.href.split('&=')[3].split('$$')[0]).then(res => res.json()).then(data => {
+        if (data.players[0]) {
+          var cnt = 0;
+          checkall()
+          function checkall() {
+            if (data.players[cnt].id == window.location.href.split('&=')[3].split('$$')[1]) {
+
+              elements1.setsubs(data.players[cnt].xp)
+              elements1.setname(data.players[cnt].username)
+              elements1.setid(window.location.href.split('&=')[3].split('$$')[1])
+              elements1.setdesc(data.players[cnt].username)
+              elements1.setpicture(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+              elements1.setbanner(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+            } else {
+              if (cnt >= data.players.length - 1) {
+                console.log("Not Found. Or not in the top 100.")
+              } else {
+                cnt++
+                checkall()
+              }
+            }
+          }
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mee6/' + window.location.href.split('&=')[3].split('$$')[0]).then(res => res.json()).then(data => {
+              if (data.players[0]) {
+                var cnt = 0;
+                checkall()
+                function checkall() {
+                  if (data.players[cnt].id == window.location.href.split('&=')[3].split('$$')[1]) {
+
+                    elements1.setsubs(data.players[cnt].xp)
+                    elements1.setname(data.players[cnt].username)
+                    elements1.setid(window.location.href.split('&=')[3].split('$$')[1])
+                    elements1.setdesc(data.players[cnt].username)
+                    elements1.setpicture(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+                    elements1.setbanner(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+                  } else {
+                    if (cnt >= data.players.length - 1) {
+                      console.log("Not Found. Or not in the top 100.")
+                    } else {
+                      cnt++
+                      checkall()
+                    }
+                  }
+                }
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "mcserver") {
+      elements1.setthing("Players")
+      fetch('https://' + document.domain + '/api/minecraft/server/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.players) {
+          elements1.setsubs(data.players)
+          elements1.setname(window.location.href.split('&=')[3])
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(window.location.href.split('&=')[3])
+          elements1.setpicture(data.icon)
+          elements1.setbanner(data.icon)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/minecraft/server/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.players) {
+                elements1.setsubs(data.players)
+                elements1.setname(window.location.href.split('&=')[3])
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(window.location.href.split('&=')[3])
+                elements1.setpicture(data.icon)
+                elements1.setbanner(data.icon)
+              }
+            })
+          }, 6000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "dcserver") {
+      elements1.setthing("Members")
+      fetch('https://discord.com/api/v6/invites/' + window.location.href.split('&=')[3] + '?with_counts=true').then(res => res.json()).then(data => {
+        if (data.approximate_member_count) {
+          elements1.setsubs(data.approximate_member_count)
+          elements1.setname(data.guild.name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.guild.description)
+          elements1.setpicture(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+          elements1.setbanner(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+
+          setInterval(function () {
+            fetch('https://discord.com/api/v6/invites/' + window.location.href.split('&=')[3] + '?with_counts=true').then(res => res.json()).then(data => {
+              if (data.approximate_member_count) {
+                elements1.setsubs(data.approximate_member_count)
+                elements1.setname(data.guild.name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.guild.description)
+                elements1.setpicture(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+                elements1.setbanner(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "dmuser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/dailymotion/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.list) {
+          elements1.setsubs(data.list[0].followers_total)
+          elements1.setname(data.list[0].screenname)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.list[0].description)
+          elements1.setpicture(data.list[0].avatar_720_url)
+          elements1.setbanner(data.list[0].cover_url)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/dailymotion/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.list) {
+                elements1.setsubs(data.list[0].followers_total)
+                elements1.setname(data.list[0].screenname)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.list[0].description)
+                elements1.setpicture(data.list[0].avatar_720_url)
+                elements1.setbanner(data.list[0].cover_url)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "vkgroup") {
+      elements1.setthing("Members")
+      fetch('https://' + document.domain + '/api/vk/group/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.response) {
+          elements1.setsubs(data.response[0].members_count)
+          elements1.setname(data.response[0].name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.response[0].name)
+          elements1.setpicture(data.response[0].photo_200)
+          elements1.setbanner(data.response[0].photo_200)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/vk/group/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.response) {
+                elements1.setsubs(data.response[0].members_count)
+                elements1.setname(data.response[0].name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.response[0].name)
+                elements1.setpicture(data.response[0].photo_200)
+                elements1.setbanner(data.response[0].photo_200)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "covidworld") {
+      elements1.setthing("Total Cases")
+      fetch('https://' + document.domain + '/api/coronavirus/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements1.setsubs(data.data[0].totalcases)
+          elements1.setname("CoronaVirus")
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc("CoronaVirus")
+          elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          elements1.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/coronavirus/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements1.setsubs(data.data[0].totalcases)
+                elements1.setname("CoronaVirus")
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc("CoronaVirus")
+                elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements1.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "covidcountry") {
+      elements1.setthing("Total Cases")
+      fetch('https://' + document.domain + '/api/coronavirus/country/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements1.setsubs(data.data[0].totalcases)
+          elements1.setname(window.location.href.split('&=')[3])
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(window.location.href.split('&=')[3])
+          elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          elements1.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/coronavirus/country/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements1.setsubs(data.data[0].totalcases)
+                elements1.setname(window.location.href.split('&=')[3])
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(window.location.href.split('&=')[3])
+                elements1.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements1.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "phubuser") {
+      elements1.setthing("Subscribers")
+      fetch('https://' + document.domain + '/api/phub/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements1.setsubs(data.data[0].subscribers)
+          elements1.setname(data.data[0].name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.data[0].name)
+          elements1.setpicture(data.data[0].image)
+          elements1.setbanner(data.data[0].banner)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/phub/user/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements1.setsubs(data.data[0].subscribers)
+                elements1.setname(data.data[0].name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.data[0].name)
+                elements1.setpicture(data.data[0].image)
+                elements1.setbanner(data.data[0].banner)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "dartuser") {
+      elements1.setthing("Watchers")
+      fetch('https://cors.mixerno.space/https://www.deviantart.com/_napi/da-user-profile/api/init/about?username=' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.pageData) {
+          elements1.setsubs(data.pageData.stats.watchers)
+          elements1.setname(data.pageData.gruser.username)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.pageData.gruser.username)
+          elements1.setpicture(data.pageData.gruser.usericon)
+          elements1.setbanner(data.pageData.gruser.usericon)
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://www.deviantart.com/_napi/da-user-profile/api/init/about?username=' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.pageData) {
+                elements1.setsubs(data.pageData.stats.watchers)
+                elements1.setname(data.pageData.gruser.username)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.pageData.gruser.username)
+                elements1.setpicture(data.pageData.gruser.usericon)
+                elements1.setbanner(data.pageData.gruser.usericon)
+              }
+            })
+          }, 4000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "csitesite") {
+      elements1.setthing("Platforms")
+      fetch('https://' + document.domain + '/api/mixernospace/counters/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data) {
+          /*elements1.setsubs(data.pageData.stats.watchers)
+          elements1.setname(data.pageData.gruser.username)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.pageData.gruser.username)
+          elements1.setpicture(data.pageData.gruser.usericon)
+          elements1.setbanner(data.pageData.gruser.usericon)*/
+          switch (window.location.href.split('&=')[3]) {
+            case "mixernospace":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("Mixerno.Space")
+              elements1.setpicture("https://mixerno.space/icons/2.png")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("Mixerno.Space")
+              elements1.setbanner("https://mixerno.space/icons/2.png")
+              break;
+            case "nextcounts":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("Nextcounts.live")
+              elements1.setpicture("https://nextcounts.live/assets/img/favicon.png")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("Nextcounts.live")
+              elements1.setbanner("https://nextcounts.live/assets/img/favicon.png")
+              break;
+            case "countslive":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("Counts.live")
+              elements1.setpicture("https://static.counts.live/images/core/logo.png")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("Counts.live")
+              elements1.setbanner("https://static.counts.live/images/core/logo.png")
+              break;
+            case "livecountsio":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("Livecounts.io")
+              elements1.setpicture("https://livecounts.io/static/logo.png")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("Livecounts.io")
+              elements1.setbanner("https://livecounts.io/static/logo.png")
+              break;
+            case "statcounts":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("site.statcounts.com")
+              elements1.setpicture("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("site.statcounts.com")
+              elements1.setbanner("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+              break;
+            case "rarelcountsru":
+              elements1.setsubs(Math.floor(data))
+              elements1.setname("rarelcounts.ru")
+              elements1.setpicture("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+              elements1.setid(window.location.href.split('&=')[3])
+              elements1.setdesc("rarelcounts.ru")
+              elements1.setbanner("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+          }
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mixernospace/counters/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data) {
+                switch (window.location.href.split('&=')[3]) {
+                  case "mixernospace":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("Mixerno.Space")
+                    elements1.setpicture("https://mixerno.space/icons/2.png")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("Mixerno.Space")
+                    elements1.setbanner("https://mixerno.space/icons/2.png")
+                    break;
+                  case "nextcounts":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("Nextcounts.live")
+                    elements1.setpicture("https://nextcounts.live/assets/img/favicon.png")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("Nextcounts.live")
+                    elements1.setbanner("https://nextcounts.live/assets/img/favicon.png")
+                    break;
+                  case "countslive":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("Counts.live")
+                    elements1.setpicture("https://static.counts.live/images/core/logo.png")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("Counts.live")
+                    elements1.setbanner("https://static.counts.live/images/core/logo.png")
+                    break;
+                  case "livecountsio":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("Livecounts.io")
+                    elements1.setpicture("https://livecounts.io/static/logo.png")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("Livecounts.io")
+                    elements1.setbanner("https://livecounts.io/static/logo.png")
+                    break;
+                  case "statcounts":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("site.statcounts.com")
+                    elements1.setpicture("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("site.statcounts.com")
+                    elements1.setbanner("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+                    break;
+                  case "rarelcountsru":
+                    elements1.setsubs(Math.floor(data))
+                    elements1.setname("rarelcounts.ru")
+                    elements1.setpicture("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+                    elements1.setid(window.location.href.split('&=')[3])
+                    elements1.setdesc("rarelcounts.ru")
+                    elements1.setbanner("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+                }
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "spollchoice") {
+      elements1.setthing("Votes")
+      fetch('https://' + document.domain + '/api/spoll/user/' + window.location.href.split('&=')[3].split('$$')[0]).then(res => res.json()).then(data => {
+        if (data.votePossibilities[0]) {
+          var cnt = 0;
+          checkall()
+          function checkall() {
+            if (data.votePossibilities[cnt].name == window.location.href.split('&=')[3].split('$$')[1].replace(/%20/g, ' ')) {
+
+              elements1.setsubs(data.votePossibilities[cnt].responses)
+              elements1.setname(data.votePossibilities[cnt].name)
+              elements1.setid(window.location.href.split('&=')[3].split('$$')[1].replace(/%20/g, ' '))
+              elements1.setdesc(data.votePossibilities[cnt].name)
+              elements1.setpicture(`data:image/jpeg;base64,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`)
+              elements1.setbanner(`data:image/jpeg;base64,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`)
+
+            } else {
+              if (cnt >= data.votePossibilities.length - 1) {
+                console.log("Not Found. lol.")
+              } else {
+                cnt++
+                checkall()
+              }
+            }
+          }
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/spoll/user/' + window.location.href.split('&=')[3].split('$$')[0]).then(res => res.json()).then(data => {
+              if (data.votePossibilities[0]) {
+                var cnt = 0;
+                checkall()
+                function checkall() {
+                  if (data.votePossibilities[cnt].name == window.location.href.split('&=')[3].split('$$')[1].replace(/%20/g, ' ')) {
+
+                    elements1.setsubs(data.votePossibilities[cnt].responses)
+                    elements1.setname(data.votePossibilities[cnt].name)
+                    elements1.setid(window.location.href.split('&=')[3].split('$$')[1].replace(/%20/g, ' '))
+                    elements1.setdesc(data.votePossibilities[cnt].name)
+                    elements1.setpicture(`data:image/jpeg;base64,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`)
+                    elements1.setbanner(`data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSExMVFRUVFRUXFxcVFxcXFxUXFxUXFxUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQGy0dHR0tLS0tLS0rKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEBAAIDAQAAAAAAAAAAAAAAAQMGAgQHBf/EAEcQAAIBAQQGBwUDCAkFAQAAAAABAgMRElKRBBMUUZLRBQYhMUFioSNhcYGiIlNyBzIzQrGyweEVNENUc4LS4vAXJGOTwhb/xAAaAQEBAAMBAQAAAAAAAAAAAAAAAQIDBQQG/8QAMxEAAQMDAgUCBQMFAAMAAAAAAAECUQMRkRITBCNhoeEhMQUyQVJxFDOxFUJigdEiwfH/2gAMAwEAAhEDEQA/APRz4s6JClKCBkKCgMEBCiwAABAEKCkAACKAQgKUEAsABQLQAQAAFICFFoAADKAQFAIALQAAAAAABYAABaUBkAKCMEBClKQEABQikBCi0AWgAANgAECQKCgIgDRQCAl1luDFtUMSNmzUg1brJJtUMSGxUgbrJLtUMSGy+BuskbVDEhs1ILuskbVDEhs1IJuskbVDEhs1IG6yRtUMSGzUgbzJJtUMSGzUgu6yS7VDEhs1IJuskLSoY0NmpBd1kk2qGJDZqQN1kl2uniQ2akDeZI2qGJDZqQN5khaVDEhs1IJuskbXDEhs1IG6yRtUMSLs1IG6yRtUMSJs1ILuskbVDEhs1IG6yRtUMSGzUgbrJG1wxIbNSBuskbVDEhs1IG8yRtUMSGy+BvMkbVTxIbNSCbrJG1QxIbNSC7rJG1wxIbNSBuskbVDEhs1IJuskbXDEhs1ILuskbVDEhs1IG6yS7XDEhsPgm8yTLYa7mwIgJYUD5AFIBYW4FgBGgB8gCgEsADAFgAsALYAQAqQBACgAAEAZQLAAkQBIoCQAaAFguDjde4XFjlYQAFBQCAFIGACFJYAUpAiFIAW0AABFICAIpQQAAFAABACgAgRChgAAWlAIBaAYbtTFHhfM23pwufBqtUlMC7UxR4XzF6cLnwLVJTAu1MUeF8xenC58C1SUwS7U3x4XzF6cLnwLVJTHkt2pijwvmL04XPgWqSmBdqYo8L5i9OFz4FqkpjyLlTFHhfMXpwufAtUlMeSXamKPC+YvThc+BapKYLZU3x4XzF6cLnwLVJTHkXamKPC+YvThc+BapKYJdqYo8L5lvThc+BapKYDjUxR4XzJenC58C1SUwFGpijwvmL04XPgWqSmPIu1MUeF8y3pwufAtUlMFu1MUeF8yXpwufAtUlMEu1MUcnzF6cLnwLVJTHkqjUxR4XzLenC58C1SUwS7U3xyfMl6cLnwLVJTBbKmKPC+YvThc+BapKY8i7UxR4XzF6cLnwLVJTAu1MUeF8xenC58C1SUwGqmKPC+YvThc+BapKYF2pijwvmL04XPgWqSmBcqYo8L5i9OFz4FqkpgXamKPC+Zb04XPgWqSmBdqYo8L5kvThc+BapKY8i5UxR4XzF6cLnwLVJTAu1MUeF8xenC58C1SUx5Jq6m+OT5jVThc+BapKY8mew1GwAoAAAKAwQEAsBQUBEBCgtpAAAikAAQKCEAKCgAAgBQAQIhQwAALSgAC0hDHtEMUc0bNt8Lgx3GSmQtIhijmhtPhcDcZKZJr4Yo5obT4XA3GShdohijmhtPhcDcZKZG0QxRzRNp8LgbjJTI18MUc0XbfC4G4yUGvhjjmhtvhcDcZKZI68MUc0Np/2rgbjJTJdohijmhtPhcDcZKZG0QxRzQ23wuBuMlMk18MUc0Np8LgbjJTIekQxRzQ2nwuBuMlMjaIYo5obT4XA3GSmRtEMcc0Np8LgbjJTJdfDFHNDafC4G4yUyNfDFHiQ2n/AGrgbjJTIWkQxRzQ2nwuBuMlMk2iGKOaG0+FwNxkpku0QxRzQ2nwuBuMlBtEcUeJDafC4G4yUG0QxRzQ2nwuBuMlMh6RHHHNDafC4G4yUyNohjjmhtPhcDcZKZCrwxRzRNp8LgbjJQLSIYo5ou2+FwNxkpka+GKOaG2/7VwNxkpkOvDFHNDbf9q4G4yUGvhijmhtvhcDcZKZOOujijxIbb4XA3GSmTJq1uWSMdTpLpSCatblkNSyNKQXVrcskNSyNKQNWtyyQ1OkaUgatblkhrdI0pBi0mrTpq9Nwgt8rEvUybrd6JdTJtJXrZqX/wBHxtJ61aHDubn+CH8XYjc3h6y9P9nrb8Oqu/tRPydGfXWj4UJv43VzNicLU+7+Tcnwp31VDH/+3p/3d8S/0mX6R/3GX9J/yTBkp9daHjRmvhcfIxXhan3fyYr8Kd9FQ7lDrZocu+9H8UP4xtMF4esn/wBNTvhtVPoin0aHS2iz/Nq0m91qTyfaanU6qe6KaHcLUb7sXB3oxi+1KLXusaNep0mlWon0KoLcskNTpJpSDrbbQ+8pcUeZnap17mzYd9q4ItNofeUuKItU69x+nd9q4OW1UcdPiiS1TqTZd9vYu1UcdLiiLVOo2Xfb2OL0ugv16XFHmW1TqXYd9vY4y6Q0df2tLihzGmp17lTh3r/YuCf0lo33tHjhzGmrC9x+mf8AYuDlDTtHfdUpP4ShzCpUSe5F4d6e7VwdmMItWpJr3WGOp0mvSkF1a3LImp0jSkBwW5ZDU6RpSBq1uWSGt0jSkC4tyyQ1OkaUgXFuWQ1OkaUgXI7lkNayNKQcjEyCAAAANQ6xdbbrdPR7G12Sqd6T3QXj8T3UOFv/AOT8HU4XgNSaqmP+mm6RXlUlenJyk/GTtZ7mtRqWT0Os1qNSzUshjMjIAAAAAAAG6/k8rtxq07XZFwkl4K9etsXh3I5/Gt9Wqcj4o1LtdNz7nWiTWiVmnZ9mz5OST/azRQTmNPFwiItdn5PLbDrn0gsAFgAsAFgAAKASwAy6NpE6btpylB74trOwxc1He6XMXsa9LOS5snRPXKpBqNZayOJWKa/hL0PLU4Rq+rPQ59b4cx3rT9F7G76HpUKsFOnK9F9zXrbufuOe5qtWynHfTcxytcllQzGJiGAACXRcGK5UxR4f5m29OFz4NVqkpglypijwvmL04XPgWqSmC3amKPD/ADF6cLnwLVJTB8Drj0lOjSUFJXqtq7FY1FfnO23s70vmejh2Me69vbqdD4dw7n1NTrKjen1+h5+dE+hAAAAAAAAAABtHUG9raqi0vsK21W90v5nk4vTpTUcr4qiqxtpNi6zxnstW2Saurws/Wj7zz0FZuJZFyc3gkf8AqGXXseanTPpwAAAAADNougV61uppud1Wyss7E+7vatfY+xdpi57GfMtrmitXbTtqW1zAn8vc/B+KZkbkW6XKCgAAH2OrPS8qFVK9ZTm0pJ9qT7lOzev2GitSa9Lqnqh4uO4fdprp+ZPb/h6PdqYo8L5nN1U4XPg+btUlMC7UxR4XzLenC58C1SUwLtTFHhfMXpwufAtUlMCypijwvmS9OFz4FqkpgzGo2gAAHnvX2q3pKj4RpxS+bk2/2ZHT4NLU79TufDW2o3lTXD1nQAAAABJSS7wRVRPcxuvEtlMdaHHao/8ALBpUazkq8RZRrQ2/8nXbVqtdyhFN+9ytS+lnh435WnM+JvRWtRDZetX9UrfhX70Ty8P+608XB/vsPMDrn0YAAAAAB6J1F0a7o16ztqTlJ/J3V+76nL4t16loOB8QfqrKkGrdcdFVPSp2dimoz+bVks2m/mezhnaqadDpcA/VRS/09D4h6D2gAAAA9W6A0h1NGpTfe4K1++P2X6pnGrN01FQ+Z4lmiq5qSd9o1GkAEui5DHr4Yo5o2bT4XBhuMlBtEMUc0Np8LgbjJQbRDFHNDafC4G4yUPPeu009KbTT+xDu+DOlwrVSnZT6H4a5FoekqfBPQe8AAAAHOjJKScoKaTtcZW2P3Ox2kVFVPRbGD26mql7G9dC9I9HSSUadKjLdOMV2+6b7Gc6rTrp9VU4tfh+Jb7qrk6H31KlZ/Z2f5bDRoqQvc5y1WovzdzrV+j9Dn+dSoP8AywM0309r9zNOKVPZ/cyaBQ0ejFxpKEE3a0mu191ryRi9tV63ciqYv4hHrdzr/wCzp9aK0XolVKSf2V4rFE2UKbkqIqopv4J7VrsRFPNDqH0wAAAAAB6f1eqRjotBXor2cXZav1le/icqtTetRy2X3Pl+Kqs3n+qe6mq9fZp14WNP2S7vxzPXwjVaxbpb1Or8Lci0nWn/ANIa0eo6YAAAAPR+p9eK0SmnJJq/3tfeSOZxFNy1FVEPnPiD2pxDkVY/hD7W0QxRzRo2nwuDx7jJTJNohijmhtPhcDcZKF2mGKOaJtP+1cE3WShyuLcvQmpZM9KQFBblkNSyTSkC4tyyGpZGlDSPyhaDdnTrpfZa1crO5NNyg/nbJfJHv4N90Vq/k6/w2qiXp/7NTPadcAAAAAAAHc6N6Uq0HbTl2eMX2xfxjyMH02vT1NFbhqVb50/39TfOgOn6Wk/ZcVCol2x8Je+D8fh4HOrUX0/W90OJxPBLR9fds/8AT7dxblkefUsnj0pB8rrVBbJW7F+av3om6gq7jfU9XBom+w8xOsfSAAAAAjAPXOjqCjSpxsXZTgu7dFI4r3KrlW/1Platle5ZVTROvM09KsX6tOCztf8AFHR4T9u52/hzbUfyqmvnpPeAAAAD03qlRs0Slal2qTznJr0ZyeIcu6tj5vjbOrvU+u6a3LI06lk8ulIJcW5ZDUsjSkDVLcia1kaUOQKLAUAGDT9DhWpypVFbGSsf8Gn4Nd5WPVio5PcyY9WORyfQ8t6a6Jq6JO7UVsH+ZUXdJbnul7jsUqraqXT3g73D8U2oh0kzYesoKAAAAAAcqdRxalFtNO1Nd6a7miKiKllIqIqWU9O6t9LbTRUn+fF3Zr32d69zX8TkV6W2630PneLobNSyey+xOtP9UrfhX70S8P8AutJwf77PyeYHXPpAAAAASQCHqVLpvRlTi3Wp9kVb9pN9i7rF2tnHWjUV3sp82vDVldbSuDzjpTTNdWqVe6/K1e5JWRWSR1abNDUbB36NPbptZB1TM2gAACxuxLtbaSW9t2JZsGLnI1FVfoevaFo6p04U1+pCMclYcNztTlWT5d7tTlWTPaQxAAtIQw+08nqbeV17GvmdO5PaeT1HK69i8zp3D1nk+ocrr2HM6dz4vRvWinWbjejTlbYlO1KW5qXd8n2nofwyMS/quD11uB4mml/RU6XPraTo7qRcZxpzjLvTTaZoR1Nq3S6YPK11Vq3SyL/s0zpXqRUjbPR5J/8AjbdvwjKXf88z2s4xi+jsnU4fj3J6Vcp/w1evGdOVyrCUJbpKz/i956kVHJdq3Oqys16XQpTcAAAAAAbT1AnLWVVGzthFu23wlYu74s8nFo2yauxyviqLoYqSbF1mU9lrW3bLvhbb3o81Hb3G2v2ObwevfZe3ueaHUPpwAAAAAAAAAAACNghsXUromdWotIsWrpt3b1tk591q3qP7bNx5uJqtamhfrByviPEKjdDPdf4N+9p5PU5/K69jiczp3FlTyeo5XXsOZ07j2nk+ocrr2HM6dyXank+oXpdexeZ07mc1mYsBSNeFv8gDxypGxtPvTafyfadxPY+qat0RTtaJ0nXpfo6s4rcm7Mn2GDqbHe6GD6FN/wAzUU7i6z6Z9++Gn/pMP09KP5NX6Kh9vdf+nW0/pevXV2rUvpO1JxgrOGKM2UmMW7UsZ0+GpU1u1tsnRNhvAAAAAANu/J3S+3WnujCK+bk3+xZnh41fRqHJ+KO+Vv5Nk6yL/ta3+HI8tD9xv5PBwv7zPyeWnYPpQAAAARsEMe0RLZTHWg2iIso1oR6REaVGtDNo1OpV7KVKc/wxbXza7EYuVrfmWxrfXa339PybP0N1JqTalpLux+7i/tP8Ul2RXwtfwPJV4xqejPXqc6vx/wBGepvdGlGEVCCUYxViS7kl4I5yqqrdTmKqqt1OZCBlAIBaCHHWLeszLSsE1JIVRb1mhpWBqSRfW9ZjSsDUknlPTlK5pFaO6pJ8TvL9p2KS3Y38H03Cu1UWL0OkbD0AAAAAAAAAElKxWsEVbHpHU7QdTo6vdk6j1kk33WpKMflFL5tnL4lyvf6J6J6HznGV0qVVW/onodzrBJbLX7V+iqfuswotXcb+UMOFcm8z8p/J5Ydc+nAAAABl0Ne0h4/bh3935y7zF3yqYVPkd+F/g9T/AKO0f7qjwQ5HI1VJXufL7zvu7j+j9H+6o8MOQ1VJXuXed93c5Q0Kgu6nSXwjEirUWSbqr/d3OypxXZavQx0ugw1JIvx3rNDSsDUki+t6zGlYGpJF9b1mNLoGpJLfW9ZoaVgakkl9b1mNKwNSSLViRLLA1JJx2eGGOSM918rkm2yEwTZoYY5Ibr5XI22Qg2eGGOSG6+VyNtkIee9e9HVLSVJKyNSCfZijbGSyUMzo8I9Xs9fdDufDqiJS0wp8BM9J0igoAAAAABwnUSFjFXIhtXVTqxKco168bILthTffJ+EpLwj7vH4d/j4jiURNLPeTlcZxl0VjTednhhjkjw7r5XJx9tkIdHp2hHZq9kV+iqeCws2Uqj9bbqvubuGYxKzFsnun8nlp1j6kAAAAGfo79NS/xaf76MX/ACr+FNVa2268L/B609Hhhjkjj7r5XJ8rtshBs8MMckN1/wBy5G2yEGzwwxyQ3XyuRtshMDZ4YI5Ibr5XJNtkIFo8MMckN18rku2yEGzwwxyQ3HyuRtshBs8MMckN18qTbZCE1EMMckN18rku2yEGzwwxyQ3XyuRtshBqIYY5IblSVyTbZCGU1mwIAAGDTNEp1YuFSEZxfhJJr4rc/eZNcrVu1bGTXuat2rY1XpDqFTfbRqSpvDL7Uc+9ep7Gca5PmS57afHuT5kv2Ph6T1Q02HdGFT8Ml/8Ad09DeLpL0PWz4hTX3W35T/h0anQ+lx79HqfKLf7LTalWmvs5DenGU1+qGHYdJ7tnrf8ArnyLrZ9yZQy/UslMoZ6XQmmS/N0efzSj+80YrWpJ7uMF4ymn9yH1ND6kaVP9JOFNfG9LKPZ6ml3GU09kueZ/xBv0uvY2jofqpo+jtSs1k1+tPtse+Me5fHv955KnFPf6eyHgq8VUqensnQ+8zzHnAIcKtNSi4tWqSafvTVjKi2W6FRbLdDSZfk+dvZpDs8LYdtnvske/9d/idH+orHcf9P346R9H+4v67/HuX+oLHc5L8n2/SH8of7ifrv8AEn9QWO5f+n0f7xLgX+ofrl+3uT+oOjud3onqVSo1I1ZVJVHB2pNJRt8G7LbbDXU4xz2q1Etc11eNc9qtta5tKPIeMEAYAKQEKAAAGCAFJd94uDElU8n1G3ldexq5nTuSypvh6jldew5nTuX2nk+ocrr2HM6dx7TyfUOV17DmdO49p5PUvK69hzOnce08nqOV17DmdO49p5PqJyuvYczp3J7Tyeo5XXsOZ07l9p5PqLyuvYczp3JZU8nqTldew5nTuPaeT1HK69hzOncttTyeo5XXsOZ07k9p5PqHK69hzOncLWeT1LyuvYczp3KlU3w9Scrr2HM6dyLWb4fUXldew5nTuPaeT1JyuvYczp3L7Tyeo5XXsOZ07iyp5PqHK69hzOncWVPJ6jldew5nTuLKnk9RyuvYczp3FlTyeovS69hzOnce08nqOV17DmdO4Ws8n1Dldew5nTuPaeT1HK69hzOnce08n1Dldew5nTuPaeT6i8rr2LzOnce08nqTldexOZ07ktqeT6hy+vYczp3M5qNoQAAAABACgoIQFQAtAIUFABACgEIGCgoBAAAigEAKACAhQAAAwAALvvFwcdZHeszLQ6DHUki+t6zQ0ugakkaxb1mNLoGpJGsjvWaGl0DUkjWLes0NLoGpJDqLes0XS6BqSRrI71mTS6BqSSayO9ZoaXQNSSXWLes0NDoGpJGsjvWaGl0DUkk1i3rMaXQNSSV1VvWaGl0DUkk1i3rMaFgakkKot6zQ0rA1JJdZHes0NLoGpJIqi3rMul0DUkl1i3rNE0ugakkayO9ZoaXQNSSL63rMaVgakkX1vWaGlYGpJF9b1mNLoGpJF9b1mhpdA1JI1i3rNDS6BqSQqi3rMaVgakkaxb1mNDoGpJGsW9ZoaXQNSSNYt6zGlYGpJGsW9ZjQ6BqSSa2O9ZjQ6BqSSaiGGOSMtx8rkm2yEwRUIYY5Im4+VyNtkJguohhjkhuPlcjbZCB6PHDHJF3XyuRtshMDUQwxyQ3HyuRtshBqIYI5Im4+VyNtkINRDDHJF3HyuRtthME1EMMckN18rkbbIQLR4YY5Ibr5XI22QmC6iGGOSJuvlcjbZCE1EMMckXcfK5G2yELqI4Y5Ibr5XI22Qg2eGGOSG6+VyNtkJgbPDDHJDdfK5G2yEwNnhhjkhuvlcjbZCYDoRwxyQ3HyuRtshMDZ4YY5Ibj5XI22QhNRHDHJDcfK5G2yELqIYY5Ibj5XI22QmBs8MMckN18rkbbIQaiGGOSG4+VyNtkIHo8MMckNx8rkbbIQaiGGOSG4+VyNtkJgaiGGOSJuvlcjbZCDUQwxyRdx8rkbbITA2eGGOSG4+VyNtkJgPR4YY5Im4+VyNtsINRDDHJF3HyuRtshMDZoYVkibr5XI22QmDIYmYsAAAIAAGUgIACgAWAEKCtkBEAVFIEQBFKCAACwoFhAEgC2AEKQIhQUAhAUoICWghivVMMc3yNtqcrjya71ITJFKphjxPkLU5XHkXqQmS3qmGOb5C1OVx5F6kJkl6pujm+QtSlceRepCZLeqYY5vkNNOVx5F6kJkXqmGPE+QtTlceRepCZF6phjm+QtTlceRepCZJeqYY5vkW1OVx5F6kJkKVTdHifIWpyuPIvUhMi9U3R4nyJanK48i9SEyL1TDHifItqcrjyL1ITJbamGPE+RLU5XHkXqQmSXqmGOb5C1OVx5F6kJkXqmGPE+RbU5XHkXqQmS21MMc3yJanK48i9SEyL1TdHifIWpyuPIvUhMi9Uwx4nyFqcrgXqQmSXqm6Ob5C1OVx5F6kJkt6phjxPkLU5XHkXqQmSXqm6PE+RbU5XHkXqQmS3qm6Ob5EtTlceRepCZJbUwx4nyFqcrjyL1ITJb1TDHifIWpyuBepCZF6phjm+QtTlceRepCZF6phjm+QtTlceRepCZF6phjxPkLU5XHkXqQmRbUwx4nyFqcrjyL1ITIvVMMc3yFqcrjyL1ITJPabo8T5C1KVx5F6kJnwZzWbRYAAQEKAAykBAAUFILCFIUFZAQAqKQEBEUpSEAKCgEASAKARFIEQoKAQgKUEBLQQoKEAAAwACAAApCgIgKAQoKQAAFAIQMpQCEBSkAKAQAoAIUhSAAArBCAouoXBTMhdxAQpDkiFIUCXeAEQB94IAUIoIgDkwDjuIBEoEABEBRLwIC+IAZQNwUgYKACgHEgOQQHFFAYBSAhQf/Z`)
+
+                  } else {
+                    if (cnt >= data.votePossibilities.length - 1) {
+                      console.log("Not Found. lol.")
+                    } else {
+                      cnt++
+                      checkall()
+                    }
+                  }
+                }
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "iguser") {
+      elements1.setthing("Followers")
+      fetch('https://www.instagram.com/' + window.location.href.split('&=')[3] + '/?__a=1').then(res => res.json()).then(data => {
+        if (data.graphql) {
+          elements1.setsubs(data.graphql.user.edge_followed_by.count)
+          elements1.setname(data.graphql.user.full_name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.graphql.user.biography)
+          elements1.setpicture(data.graphql.user.profile_pic_url_hd)
+          elements1.setbanner(data.graphql.user.profile_pic_url_hd)
+          setInterval(function () {
+            fetch('https://www.instagram.com/' + window.location.href.split('&=')[3] + '/?__a=1').then(res => res.json()).then(data => {
+              if (data.graphql) {
+                elements1.setsubs(data.graphql.user.edge_followed_by.count)
+                elements1.setname(data.graphql.user.full_name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.graphql.user.biography)
+                elements1.setpicture(data.graphql.user.profile_pic_url_hd)
+                elements1.setbanner(data.graphql.user.profile_pic_url_hd)
+              }
+            })
+          }, 15000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "ofuser") {
+      elements1.setthing("Favourites")
+      fetch('https://' + document.domain + '/api/onlyfans/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.favoritedCount) {
+          elements1.setsubs(data.favoritedCount)
+          elements1.setname(data.name)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.rawAbout)
+          elements1.setpicture(data.avatar)
+          elements1.setbanner(data.header)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/onlyfans/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.favoritedCount) {
+                elements1.setsubs(data.favoritedCount)
+                elements1.setname(data.name)
+                elements1.setid(window.location.href.split('&=')[3])
+                elements1.setdesc(data.rawAbout)
+                elements1.setpicture(data.avatar)
+                elements1.setbanner(data.header)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[1] == "dluser") {
+      elements1.setthing("Followers")
+      fetch('https://' + document.domain + '/api/dlive/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+        if (data.data.userByDisplayName.followers.totalCount) {
+          elements1.setsubs(data.data.userByDisplayName.followers.totalCount)
+          elements1.setname(data.data.userByDisplayName.displayname)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.data.userByDisplayName.displayname)
+          elements1.setpicture(data.data.userByDisplayName.avatar)
+          elements1.setbanner(data.data.userByDisplayName.avatar)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/dlive/' + window.location.href.split('&=')[3]).then(res => res.json()).then(data => {
+              if (data.data.userByDisplayName.followers.totalCount) {
+          elements1.setsubs(data.data.userByDisplayName.followers.totalCount)
+          elements1.setname(data.data.userByDisplayName.displayname)
+          elements1.setid(window.location.href.split('&=')[3])
+          elements1.setdesc(data.data.userByDisplayName.displayname)
+          elements1.setpicture(data.data.userByDisplayName.avatar)
+          elements1.setbanner(data.data.userByDisplayName.avatar)
+              }
+            })
+          }, 2000)
+        }
+      })
+    }
+    /*
+    //S
+    //T
+    //O
+    //P
+    //
+    //H
+    //E
+    //R
+    //E
+    //!
+    */
+  }
+  function FirstLoad2() {
+    if (window.location.href.split('&=')[2] == "ytuser") {
+      elements2.setthing("Subscribers")
+      fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements2.setsubs(data.SubscriberCount)
+          elements2.setname(data.name)
+          elements2.setid(data.cid)
+          elements2.setpicture(data.image)
+          elements2.setbanner(data.banner)
+          elements2.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements2.setsubs(data.SubscriberCount)
+                elements2.setname(data.name)
+                elements2.setid(data.cid)
+                elements2.setpicture(data.image)
+                elements2.setbanner(data.banner)
+                elements2.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].statistics) {
+              elements2.setsubs(data.items[0].statistics.subscriberCount)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+                  if (data.items[0].statistics) {
+                    elements2.setsubs(data.items[0].statistics.subscriberCount)
+                    elements2.setid(window.location.href.split('&=')[4])
+                  }
+                })
+              }, 10000);
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/snippet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+
+              elements2.setname(data.items[0].snippet.title)
+              elements2.setpicture(data.items[0].snippet.thumbnails.high.url)
+              elements2.setdesc(data.items[0].snippet.description)
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/background/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+              elements2.setbanner(data.items[0].brandingSettings.image.bannerImageUrl)
+            }
+          })
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "ytuserview") {
+      elements2.setthing("Subscribers")
+      fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements2.setsubs(data.totalviews)
+          elements2.setname(data.name)
+          elements2.setid(data.cid)
+          elements2.setpicture(data.image)
+          elements2.setbanner(data.banner)
+          elements2.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements2.setsubs(data.totalviews)
+                elements2.setname(data.name)
+                elements2.setid(data.cid)
+                elements2.setpicture(data.image)
+                elements2.setbanner(data.banner)
+                elements2.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].statistics) {
+              elements2.setsubs(data.items[0].statistics.viewCount)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/youtube/channels/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+                  if (data.items[0].statistics) {
+                    elements2.setsubs(data.items[0].statistics.viewCount)
+                    elements2.setid(window.location.href.split('&=')[4])
+                  }
+                })
+              }, 20000);
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/snippet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+
+              elements2.setname(data.items[0].snippet.title)
+              elements2.setpicture(data.items[0].snippet.thumbnails.high.url)
+              elements2.setdesc(data.items[0].snippet.description)
+            }
+          })
+          fetch('https://' + document.domain + '/api/youtube/channels/background/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.items[0].snippet) {
+              elements2.setbanner(data.items[0].brandingSettings.image.bannerImageUrl)
+            }
+          })
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "ytvideo") {
+      elements2.setthing("Views")
+      fetch('https://' + document.domain + '/api/youtube/videoid/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.items[0].statistics) {
+          elements2.setsubs(data.items[0].statistics.viewCount)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/videoid/statistics/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.items[0].statistics) {
+                elements2.setsubs(data.items[0].statistics.viewCount)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 10000);
+        }
+      })
+      fetch('https://' + document.domain + '/api/youtube/videoid/snippet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.items[0].snippet) {
+
+          elements2.setname(data.items[0].snippet.title)
+          elements2.setpicture(data.items[0].snippet.thumbnails.high.url)
+          elements2.setdesc(data.items[0].snippet.description)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "ytcomment") {
+      elements2.setthing("Likes")
+      fetch('https://' + document.domain + '/api/youtube/comments/snippet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.items[0].snippet) {
+          elements2.setsubs(data.items[0].snippet.likeCount)
+          elements2.setname(data.items[0].snippet.textOriginal)
+          elements2.setpicture(data.items[0].snippet.authorProfileImageUrl)
+          elements2.setdesc(data.items[0].snippet.textDisplay)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/youtube/comments/snippet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.items[0].snippet) {
+                elements2.setsubs(data.items[0].snippet.likeCount)
+                elements2.setname(data.items[0].snippet.textOriginal)
+                elements2.setpicture(data.items[0].snippet.authorProfileImageUrl)
+                elements2.setdesc(data.items[0].snippet.textDisplay)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 10000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "redditsubreddit") {
+      elements2.setthing("Subscribers")
+      fetch('https://api.reddit.com/r/' + window.location.href.split('&=')[4] + '/about').then(res => res.json()).then(data => {
+        if (data.data) {
+          elements2.setsubs(data.data.subscribers)
+          elements2.setname(data.data.title)
+          elements2.setpicture(data.data.icon_img)
+          elements2.setdesc(data.data.description)
+          elements2.setbanner(data.data.banner_img)
+          setInterval(function () {
+            fetch('https://api.reddit.com/r/' + window.location.href.split('&=')[4] + '/about').then(res => res.json()).then(data => {
+              if (data.data) {
+                elements2.setsubs(data.data.subscribers)
+                elements2.setname(data.data.title)
+                elements2.setpicture(data.data.icon_img)
+                elements2.setdesc(data.data.description)
+                elements2.setbanner(data.data.banner_img)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "twitteruser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/twitter/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.followers) {
+          elements2.setsubs(data.followers)
+          elements2.setname(data.fullname)
+          elements2.setpicture(data.pfp)
+          elements2.setdesc(data.description)
+          elements2.setbanner(data.pfpbackground)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitter/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.followers) {
+                elements2.setsubs(data.followers)
+                elements2.setname(data.fullname)
+                elements2.setpicture(data.pfp)
+                elements2.setdesc(data.description)
+                elements2.setbanner(data.pfpbackground)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "twittertweet") {
+      elements2.setthing("Likes")
+      fetch('https://' + document.domain + '/api/twitter/tweet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.favorite_count) {
+          elements2.setsubs(data.favorite_count)
+          elements2.setname(data.text)
+          //elements2.setpicture(data.pfp)
+          elements2.setdesc(data.text)
+          //elements2.setbanner(data.pfpbackground)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitter/tweet/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.favorite_count) {
+                elements2.setsubs(data.favorite_count)
+                elements2.setname(data.text)
+                //elements2.setpicture(data.pfp)
+                elements2.setdesc(data.text)
+                //elements2.setbanner(data.pfpbackground)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "twitchuser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/twitch/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.channels[0]) {
+          elements2.setsubs(data.channels[0].followers)
+          elements2.setname(data.channels[0].display_name)
+          elements2.setpicture(data.channels[0].logo)
+          elements2.setdesc(data.channels[0].description)
+          elements2.setbanner(data.channels[0].profile_banner)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/twitch/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.channels[0]) {
+                elements2.setsubs(data.channels[0].followers)
+                elements2.setname(data.channels[0].display_name)
+                elements2.setpicture(data.channels[0].logo)
+                elements2.setdesc(data.channels[0].description)
+                elements2.setbanner(data.channels[0].profile_banner)
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 6000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "ecosia") {
+      elements2.setthing("Trees")
+      fetch('https://cors.mixerno.space/https://api.ecosia.org/v1/trees/count').then(res => res.json()).then(data => {
+        if (data.count) {
+          elements2.setsubs(data.count)
+          elements2.setname("Ecosia")
+          elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://api.ecosia.org/v1/trees/count').then(res => res.json()).then(data => {
+              if (data.followers) {
+                elements2.setsubs(data.count)
+                elements2.setname("Ecosia")
+                elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "globalclicker") {
+      elements2.setthing("Clicks")
+      fetch('https://cors.mixerno.space/http://global-clicker.mrcode.io/getpoints').then(res => res.json()).then(data => {
+        if (data) {
+          elements2.setsubs(data)
+          elements2.setname("Global Clicker")
+          elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/http://global-clicker.mrcode.io/getpoints').then(res => res.json()).then(data => {
+              if (data) {
+                elements2.setsubs(data)
+                elements2.setname("Global Clicker")
+                elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements2.setid(window.location.href.split('&=')[4])
+              }
+            })
+          }, 2000);
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "tiktokuser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/tiktok/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements2.setsubs(data.SubscriberCount)
+          elements2.setname(data.name)
+          elements2.setid(data.cid)
+          elements2.setpicture(data.image)
+          //elements2.setbanner(data.banner)
+          elements2.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/tiktok/estimated/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements2.setsubs(data.SubscriberCount)
+                elements2.setname(data.name)
+                elements2.setid(data.cid)
+                elements2.setpicture(data.image)
+                //elements2.setbanner(data.banner)
+                elements2.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        } else {
+          fetch('https://' + document.domain + '/api/tiktok/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+            if (data.name) {
+              elements2.setsubs(data.followers)
+              elements2.setname(data.name)
+              elements2.setpicture(data.avatarurl)
+              elements2.setdesc(data.description)
+              setInterval(function () {
+                fetch('https://' + document.domain + '/api/tiktok/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+                  if (data.name) {
+                    elements2.setsubs(data.followers)
+                    elements2.setname(data.name)
+                    elements2.setpicture(data.avatarurl)
+                    elements2.setdesc(data.description)
+                    elements2.setid(window.location.href.split('&=')[4])
+                  }
+                })
+              }, 10000);
+            }
+          })
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "mcvisit") {
+      elements2.setthing("Visits")
+      fetch('https://' + document.domain + '/api/mcvisit/server/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (!data.msg) {
+          elements2.setsubs(data.visits)
+          elements2.setname(data.name)
+          elements2.setid(data.ip)
+          elements2.setpicture(data.icon)
+          //elements2.setbanner(data.banner)
+          elements2.setdesc(data.name)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mcvisit/server/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (!data.msg) {
+                elements2.setsubs(data.visits)
+                elements2.setname(data.name)
+                elements2.setid(data.ip)
+                elements2.setpicture(data.icon)
+                //elements2.setbanner(data.banner)
+                elements2.setdesc(data.name)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "robloxuser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/roblox/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.followers) {
+          elements2.setsubs(data.followers)
+          elements2.setname(data.name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setpicture(data.pfp)
+          //elements2.setbanner(data.banner)
+          //elements2.setdesc(data.description)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/roblox/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.followers) {
+                elements2.setsubs(data.followers)
+                elements2.setname(data.name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setpicture(data.pfp)
+                //elements2.setbanner(data.banner)
+                //elements2.setdesc(data.description)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "robloxgame") {
+      elements2.setthing("Visits")
+      fetch('https://cors.mixerno.space/https://games.roblox.com/v1/games?universeIds=' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.data[0].visits) {
+          elements2.setsubs(data.data[0].visits)
+          elements2.setname(data.data[0].name)
+          elements2.setid(window.location.href.split('&=')[4])
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=' + window.location.href.split('&=')[4] + '&size=768x432&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements2.setbanner(json.data[0].thumbnails[0].imageUrl)
+            }
+          })
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/games/icons?universeIds=' + window.location.href.split('&=')[4] + '&size=512x512&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements2.setpicture(json.data[0].imageUrl)
+            }
+          })
+          elements2.setdesc(data.data[0].description)
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://games.roblox.com/v1/games?universeIds=' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements2.setsubs(data.data[0].visits)
+                elements2.setname(data.data[0].name)
+                elements2.setid(window.location.href.split('&=')[4])
+                //elements2.setbanner(data.banner)
+                elements2.setdesc(data.data[0].description)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "robloxgroup") {
+      elements2.setthing("Members")
+      fetch('https://cors.mixerno.space/https://groups.roblox.com/v1/groups/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.memberCount) {
+          elements2.setsubs(data.memberCount)
+          elements2.setname(data.name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.description)
+          fetch('https://cors.mixerno.space/https://thumbnails.roblox.com/v1/groups/icons?groupIds=' + window.location.href.split('&=')[4] + '&size=420x420&format=Png&isCircular=false').then(res => res.json()).then(data => {
+            //console.log(data)
+            var json = data
+            if (!json.data) {
+              console.log("Api Error.")
+
+            } else {
+              elements2.setpicture(json.data[0].imageUrl)
+              elements2.setbanner(json.data[0].imageUrl)
+            }
+          })
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://groups.roblox.com/v1/groups/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.memberCount) {
+                elements2.setsubs(data.memberCount)
+                elements2.setname(data.name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.description)
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "storyfireuser") {
+      elements2.setthing("Followers")
+      fetch('https://storyfire.com/app/users/getProfile/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.followersCount) {
+          elements2.setsubs(data.followersCount)
+          elements2.setname(data.username)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.bio)
+          elements2.setpicture(data.userimage)
+          elements2.setbanner(data.userimage)
+          setInterval(function () {
+            fetch('https://storyfire.com/app/users/getProfile/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.memberCount) {
+                elements2.setsubs(data.followersCount)
+                elements2.setname(data.username)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.bio)
+                elements2.setpicture(data.userimage)
+                elements2.setbanner(data.userimage)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "storyfirevideo") {
+      elements2.setthing("Views")
+      fetch('https://storyfire.com/app/videoDetail/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.video.views) {
+          elements2.setsubs(data.video.views)
+          elements2.setname(data.video.title)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.video.description)
+          elements2.setpicture(data.video.storyImage)
+          elements2.setbanner(data.video.storyImage)
+          setInterval(function () {
+            fetch('https://storyfire.com/app/videoDetail/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.video.views) {
+                elements2.setsubs(data.video.views)
+                elements2.setname(data.video.title)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.video.description)
+                elements2.setpicture(json.video.storyImage)
+                elements2.setbanner(data.video.storyImage)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "mee6user") {
+      elements2.setthing("XP")
+      fetch('https://' + document.domain + '/api/mee6/' + window.location.href.split('&=')[4].split('$$')[0]).then(res => res.json()).then(data => {
+        if (data.players[0]) {
+          var cnt = 0;
+          checkall()
+          function checkall() {
+            if (data.players[cnt].id == window.location.href.split('&=')[4].split('$$')[1]) {
+
+              elements2.setsubs(data.players[cnt].xp)
+              elements2.setname(data.players[cnt].username)
+              elements2.setid(window.location.href.split('&=')[4].split('$$')[1])
+              elements2.setdesc(data.players[cnt].username)
+              elements2.setpicture(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+              elements2.setbanner(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+            } else {
+              if (cnt >= data.players.length - 1) {
+                console.log("Not Found. Or not in the top 100.")
+              } else {
+                cnt++
+                checkall()
+              }
+            }
+          }
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mee6/' + window.location.href.split('&=')[4].split('$$')[0]).then(res => res.json()).then(data => {
+              if (data.players[0]) {
+                var cnt = 0;
+                checkall()
+                function checkall() {
+                  if (data.players[cnt].id == window.location.href.split('&=')[4].split('$$')[1]) {
+
+                    elements2.setsubs(data.players[cnt].xp)
+                    elements2.setname(data.players[cnt].username)
+                    elements2.setid(window.location.href.split('&=')[4].split('$$')[1])
+                    elements2.setdesc(data.players[cnt].username)
+                    elements2.setpicture(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+                    elements2.setbanner(`https://cdn.discordapp.com/avatars/${data.players[cnt].id}/${data.players[cnt].avatar}.png`)
+                  } else {
+                    if (cnt >= data.players.length - 1) {
+                      console.log("Not Found. Or not in the top 100.")
+                    } else {
+                      cnt++
+                      checkall()
+                    }
+                  }
+                }
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "mcserver") {
+      elements2.setthing("Players")
+      fetch('https://' + document.domain + '/api/minecraft/server/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.players) {
+          elements2.setsubs(data.players)
+          elements2.setname(window.location.href.split('&=')[4])
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(window.location.href.split('&=')[4])
+          elements2.setpicture(data.icon)
+          elements2.setbanner(data.icon)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/minecraft/server/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.players) {
+                elements2.setsubs(data.players)
+                elements2.setname(window.location.href.split('&=')[4])
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(window.location.href.split('&=')[4])
+                elements2.setpicture(data.icon)
+                elements2.setbanner(data.icon)
+              }
+            })
+          }, 6000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "dcserver") {
+      elements2.setthing("Members")
+      fetch('https://discord.com/api/v6/invites/' + window.location.href.split('&=')[4] + '?with_counts=true').then(res => res.json()).then(data => {
+        if (data.approximate_member_count) {
+          elements2.setsubs(data.approximate_member_count)
+          elements2.setname(data.guild.name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.guild.description)
+          elements2.setpicture(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+          elements2.setbanner(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+
+          setInterval(function () {
+            fetch('https://discord.com/api/v6/invites/' + window.location.href.split('&=')[4] + '?with_counts=true').then(res => res.json()).then(data => {
+              if (data.approximate_member_count) {
+                elements2.setsubs(data.approximate_member_count)
+                elements2.setname(data.guild.name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.guild.description)
+                elements2.setpicture(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+                elements2.setbanner(`https://cdn.discordapp.com/icons/${data.guild.id}/${data.guild.icon}.png`)
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "dmuser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/dailymotion/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.list) {
+          elements2.setsubs(data.list[0].followers_total)
+          elements2.setname(data.list[0].screenname)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.list[0].description)
+          elements2.setpicture(data.list[0].avatar_720_url)
+          elements2.setbanner(data.list[0].cover_url)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/dailymotion/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.list) {
+                elements2.setsubs(data.list[0].followers_total)
+                elements2.setname(data.list[0].screenname)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.list[0].description)
+                elements2.setpicture(data.list[0].avatar_720_url)
+                elements2.setbanner(data.list[0].cover_url)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "vkgroup") {
+      elements2.setthing("Members")
+      fetch('https://' + document.domain + '/api/vk/group/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.response) {
+          elements2.setsubs(data.response[0].members_count)
+          elements2.setname(data.response[0].name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.response[0].name)
+          elements2.setpicture(data.response[0].photo_200)
+          elements2.setbanner(data.response[0].photo_200)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/vk/group/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.response) {
+                elements2.setsubs(data.response[0].members_count)
+                elements2.setname(data.response[0].name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.response[0].name)
+                elements2.setpicture(data.response[0].photo_200)
+                elements2.setbanner(data.response[0].photo_200)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "covidworld") {
+      elements2.setthing("Total Cases")
+      fetch('https://' + document.domain + '/api/coronavirus/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements2.setsubs(data.data[0].totalcases)
+          elements2.setname("CoronaVirus")
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc("CoronaVirus")
+          elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          elements2.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/coronavirus/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements2.setsubs(data.data[0].totalcases)
+                elements2.setname("CoronaVirus")
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc("CoronaVirus")
+                elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements2.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "covidcountry") {
+      elements2.setthing("Total Cases")
+      fetch('https://' + document.domain + '/api/coronavirus/country/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements2.setsubs(data.data[0].totalcases)
+          elements2.setname(window.location.href.split('&=')[4])
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(window.location.href.split('&=')[4])
+          elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          elements2.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/coronavirus/country/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements2.setsubs(data.data[0].totalcases)
+                elements2.setname(window.location.href.split('&=')[4])
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(window.location.href.split('&=')[4])
+                elements2.setpicture("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+                elements2.setbanner("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.YnHIfsU93NuHY0i2OGtZBQHaHa%26pid%3DApi&f=1")
+
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "phubuser") {
+      elements2.setthing("Subscribers")
+      fetch('https://' + document.domain + '/api/phub/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.data) {
+          elements2.setsubs(data.data[0].subscribers)
+          elements2.setname(data.data[0].name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.data[0].name)
+          elements2.setpicture(data.data[0].image)
+          elements2.setbanner(data.data[0].banner)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/phub/user/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.data) {
+                elements2.setsubs(data.data[0].subscribers)
+                elements2.setname(data.data[0].name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.data[0].name)
+                elements2.setpicture(data.data[0].image)
+                elements2.setbanner(data.data[0].banner)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "dartuser") {
+      elements2.setthing("Watchers")
+      fetch('https://cors.mixerno.space/https://www.deviantart.com/_napi/da-user-profile/api/init/about?username=' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.pageData) {
+          elements2.setsubs(data.pageData.stats.watchers)
+          elements2.setname(data.pageData.gruser.username)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.pageData.gruser.username)
+          elements2.setpicture(data.pageData.gruser.usericon)
+          elements2.setbanner(data.pageData.gruser.usericon)
+          setInterval(function () {
+            fetch('https://cors.mixerno.space/https://www.deviantart.com/_napi/da-user-profile/api/init/about?username=' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.pageData) {
+                elements2.setsubs(data.pageData.stats.watchers)
+                elements2.setname(data.pageData.gruser.username)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.pageData.gruser.username)
+                elements2.setpicture(data.pageData.gruser.usericon)
+                elements2.setbanner(data.pageData.gruser.usericon)
+              }
+            })
+          }, 4000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "csitesite") {
+      elements2.setthing("Platforms")
+      fetch('https://' + document.domain + '/api/mixernospace/counters/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data) {
+          /*elements2.setsubs(data.pageData.stats.watchers)
+          elements2.setname(data.pageData.gruser.username)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.pageData.gruser.username)
+          elements2.setpicture(data.pageData.gruser.usericon)
+          elements2.setbanner(data.pageData.gruser.usericon)*/
+          switch (window.location.href.split('&=')[4]) {
+            case "mixernospace":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("Mixerno.Space")
+              elements2.setpicture("https://mixerno.space/icons/2.png")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("Mixerno.Space")
+              elements2.setbanner("https://mixerno.space/icons/2.png")
+              break;
+            case "nextcounts":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("Nextcounts.live")
+              elements2.setpicture("https://nextcounts.live/assets/img/favicon.png")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("Nextcounts.live")
+              elements2.setbanner("https://nextcounts.live/assets/img/favicon.png")
+              break;
+            case "countslive":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("Counts.live")
+              elements2.setpicture("https://static.counts.live/images/core/logo.png")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("Counts.live")
+              elements2.setbanner("https://static.counts.live/images/core/logo.png")
+              break;
+            case "livecountsio":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("Livecounts.io")
+              elements2.setpicture("https://livecounts.io/static/logo.png")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("Livecounts.io")
+              elements2.setbanner("https://livecounts.io/static/logo.png")
+              break;
+            case "statcounts":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("site.statcounts.com")
+              elements2.setpicture("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("site.statcounts.com")
+              elements2.setbanner("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+              break;
+            case "rarelcountsru":
+              elements2.setsubs(Math.floor(data))
+              elements2.setname("rarelcounts.ru")
+              elements2.setpicture("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+              elements2.setid(window.location.href.split('&=')[4])
+              elements2.setdesc("rarelcounts.ru")
+              elements2.setbanner("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+          }
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/mixernospace/counters/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data) {
+                switch (window.location.href.split('&=')[4]) {
+                  case "mixernospace":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("Mixerno.Space")
+                    elements2.setpicture("https://mixerno.space/icons/2.png")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("Mixerno.Space")
+                    elements2.setbanner("https://mixerno.space/icons/2.png")
+                    break;
+                  case "nextcounts":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("Nextcounts.live")
+                    elements2.setpicture("https://nextcounts.live/assets/img/favicon.png")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("Nextcounts.live")
+                    elements2.setbanner("https://nextcounts.live/assets/img/favicon.png")
+                    break;
+                  case "countslive":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("Counts.live")
+                    elements2.setpicture("https://static.counts.live/images/core/logo.png")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("Counts.live")
+                    elements2.setbanner("https://static.counts.live/images/core/logo.png")
+                    break;
+                  case "livecountsio":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("Livecounts.io")
+                    elements2.setpicture("https://livecounts.io/static/logo.png")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("Livecounts.io")
+                    elements2.setbanner("https://livecounts.io/static/logo.png")
+                    break;
+                  case "statcounts":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("site.statcounts.com")
+                    elements2.setpicture("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("site.statcounts.com")
+                    elements2.setbanner("https://yt3.ggpht.com/a/AATXAJwxygD22e0KW3JCGPHOJoebPsCLGoODnmzjymwE6A=s800-c-k-c0xffffffff-no-rj-mo")
+                    break;
+                  case "rarelcountsru":
+                    elements2.setsubs(Math.floor(data))
+                    elements2.setname("rarelcounts.ru")
+                    elements2.setpicture("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+                    elements2.setid(window.location.href.split('&=')[4])
+                    elements2.setdesc("rarelcounts.ru")
+                    elements2.setbanner("https://rarelcounts.ru/wp-content/themes/rarelcounts/assets/img/logo2.png")
+                }
+              }
+            })
+          }, 10000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "spollchoice") {
+      elements2.setthing("Votes")
+      fetch('https://' + document.domain + '/api/spoll/user/' + window.location.href.split('&=')[4].split('$$')[0]).then(res => res.json()).then(data => {
+        if (data.votePossibilities[0]) {
+          var cnt = 0;
+          checkall()
+          function checkall() {
+            if (data.votePossibilities[cnt].name == window.location.href.split('&=')[4].split('$$')[1].replace(/%20/g, ' ')) {
+
+              elements2.setsubs(data.votePossibilities[cnt].responses)
+              elements2.setname(data.votePossibilities[cnt].name)
+              elements2.setid(window.location.href.split('&=')[4].split('$$')[1].replace(/%20/g, ' '))
+              elements2.setdesc(data.votePossibilities[cnt].name)
+              elements2.setpicture(`data:image/jpeg;base64,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`)
+              elements2.setbanner(`data:image/jpeg;base64,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`)
+
+            } else {
+              if (cnt >= data.votePossibilities.length - 1) {
+                console.log("Not Found. lol.")
+              } else {
+                cnt++
+                checkall()
+              }
+            }
+          }
+
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/spoll/user/' + window.location.href.split('&=')[4].split('$$')[0]).then(res => res.json()).then(data => {
+              if (data.votePossibilities[0]) {
+                var cnt = 0;
+                checkall()
+                function checkall() {
+                  if (data.votePossibilities[cnt].name == window.location.href.split('&=')[4].split('$$')[1].replace(/%20/g, ' ')) {
+
+                    elements2.setsubs(data.votePossibilities[cnt].responses)
+                    elements2.setname(data.votePossibilities[cnt].name)
+                    elements2.setid(window.location.href.split('&=')[4].split('$$')[1].replace(/%20/g, ' '))
+                    elements2.setdesc(data.votePossibilities[cnt].name)
+                    elements2.setpicture(`data:image/jpeg;base64,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`)
+                    elements2.setbanner(`data:image/jpeg;base64,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`)
+
+                  } else {
+                    if (cnt >= data.votePossibilities.length - 1) {
+                      console.log("Not Found. lol.")
+                    } else {
+                      cnt++
+                      checkall()
+                    }
+                  }
+                }
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "iguser") {
+      elements2.setthing("Followers")
+      fetch('https://www.instagram.com/' + window.location.href.split('&=')[4] + '/?__a=1').then(res => res.json()).then(data => {
+        if (data.graphql) {
+          elements2.setsubs(data.graphql.user.edge_followed_by.count)
+          elements2.setname(data.graphql.user.full_name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.graphql.user.biography)
+          elements2.setpicture(data.graphql.user.profile_pic_url_hd)
+          elements2.setbanner(data.graphql.user.profile_pic_url_hd)
+          setInterval(function () {
+            fetch('https://www.instagram.com/' + window.location.href.split('&=')[4] + '/?__a=1').then(res => res.json()).then(data => {
+              if (data.graphql) {
+                elements2.setsubs(data.graphql.user.edge_followed_by.count)
+                elements2.setname(data.graphql.user.full_name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.graphql.user.biography)
+                elements2.setpicture(data.graphql.user.profile_pic_url_hd)
+                elements2.setbanner(data.graphql.user.profile_pic_url_hd)
+              }
+            })
+          }, 15000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "ofuser") {
+      elements2.setthing("Favourites")
+      fetch('https://' + document.domain + '/api/onlyfans/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.favoritedCount) {
+          elements2.setsubs(data.favoritedCount)
+          elements2.setname(data.name)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.rawAbout)
+          elements2.setpicture(data.avatar)
+          elements2.setbanner(data.header)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/onlyfans/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.favoritedCount) {
+                elements2.setsubs(data.favoritedCount)
+                elements2.setname(data.name)
+                elements2.setid(window.location.href.split('&=')[4])
+                elements2.setdesc(data.rawAbout)
+                elements2.setpicture(data.avatar)
+                elements2.setbanner(data.header)
+              }
+            })
+          }, 2000)
+        }
+      })
+    } else if (window.location.href.split('&=')[2] == "dluser") {
+      elements2.setthing("Followers")
+      fetch('https://' + document.domain + '/api/dlive/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+        if (data.data.userByDisplayName.followers.totalCount) {
+          elements2.setsubs(data.data.userByDisplayName.followers.totalCount)
+          elements2.setname(data.data.userByDisplayName.displayname)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.data.userByDisplayName.displayname)
+          elements2.setpicture(data.data.userByDisplayName.avatar)
+          elements2.setbanner(data.data.userByDisplayName.avatar)
+          setInterval(function () {
+            fetch('https://' + document.domain + '/api/dlive/' + window.location.href.split('&=')[4]).then(res => res.json()).then(data => {
+              if (data.data.userByDisplayName.followers.totalCount) {
+          elements2.setsubs(data.data.userByDisplayName.followers.totalCount)
+          elements2.setname(data.data.userByDisplayName.displayname)
+          elements2.setid(window.location.href.split('&=')[4])
+          elements2.setdesc(data.data.userByDisplayName.displayname)
+          elements2.setpicture(data.data.userByDisplayName.avatar)
+          elements2.setbanner(data.data.userByDisplayName.avatar)
+              }
+            })
+          }, 2000)
+        }
+      })
+    }
+  }
+  setInterval(function () {
+    document.getElementById('dif').innerHTML = count1 - count2
+    graphData.series[0].addPoint([
+      (new Date()).getTime(),
+      parseFloat(count1 - count2)
+    ]);
+    if (graphData.series[0].data.length >= 900) {
+      graphData.series[0].data[0].remove()
+    }
+  }, 2000);
+
+
+</script>
+
+</html>
