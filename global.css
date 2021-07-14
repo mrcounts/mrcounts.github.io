@@ -66,7 +66,7 @@ body {
   }
 
   #YTsubs,#YTsubs2 {
-    font-size: calc(3.2em + 2vw) !important;
+    font-size: 100px !important;
     transition: 0.3s;
   }
   #dif {
@@ -75,7 +75,7 @@ body {
   }
 
   #YTname,#YTname2 {
-    font-size: calc(1.3em + 1.3vw) !important;
+    font-size: 32px !important;
     transition: 0.3s;
   }
   #YTidentifier,#YTidentifier2 {
