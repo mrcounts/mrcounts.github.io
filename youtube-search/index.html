@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charSet="utf-8"/>
+        <script>
+            !function() {
+                try {
+                    var d = document.documentElement.classList;
+                    d.remove('light', 'dark');
+                    var e = localStorage.getItem('theme');
+                    if ("system" === e || (!e && true)) {
+                        var t = "(prefers-color-scheme: dark)"
+                          , m = window.matchMedia(t);
+                        m.media !== t || m.matches ? d.add('dark') : d.add('light')
+                    } else if (e)
+                        d.add(e)
+                } catch (e) {}
+            }()
+        </script>
+        <title>mrcounts - Realtime YouTube Live Subscriber Counter. The best YouTube Counter Ever! 🔥</title>
+        <meta name="title" content="mrcounts - Realtime YouTube Live Subscriber Counter. The best YouTube Counter Ever! 🔥"/>
+        <meta name="description" content="mr counts is the best and easiest way to see any Real-Time statistics of any YouTube user!. YouTube Live Subscriber Counter updated in Realtime! YouTube Realtime. The best YouTube Counter here which shows 100% accurate data!"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://mrcounts.github.io/youtube-search/>
+        <meta property="og:title" content="mrcounts - Realtime YouTube Live Subscriber Counter. The best YouTube Counter Ever! 🔥"/>
+        <meta property="og:description" content="mrcounts - Realtime YouTube Live Subscriber Counter. The best YouTube Counter Ever! 🔥"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="icon" type="image/png" href="favicon-32x32.png"/>
+  
+        <link rel="manifest" href="manifest.json"/>
+        <meta name="theme-color" content="#f03162"/>
+        <link rel="apple-touch-icon" href="favicon-32x32.png"/>
+      
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-119417406-7');
+        </script>
+        <meta name="next-head-count" content="23"/>
+        <link rel="preload" href="_next/static/css/134ee01b056defa85b8a.css" as="style"/>
+        <link rel="stylesheet" href="_next/static/css/134ee01b056defa85b8a.css" data-n-g=""/>
+        <link rel="preload" href="_next/static/css/22553819e147f1a94bdd.css" as="style"/>
+        <link rel="stylesheet" href="_next/static/css/22553819e147f1a94bdd.css" data-n-p=""/>
+        <noscript data-n-css=""></noscript>
+        
+    </head>
+    <body>
+<style>
+body {
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+  }
+</style>
+
+        <div id="__next">
+          
+                    <div class="mx-3 sm:mx-16 md:mx-32">
+                        <img class="mt-10 w-48 sm:w-64 m-auto" src="icons/appIcons/youtube.svg"/>
+                        <p class="text-2xl text-white dark:text-white sm:text-3xl text-center mt-5">YouTube Live Subscriber Counter</p>
+                        <div class="mt-4 sm:mt-5 lg:mx-32 xl:mx-64">
+                            <div>
+                                <div>
+                                    <div class="relative mt-1">
+                                        <input type="text" class="rounded-xl w-full dark:bg-gray-1000 pl-3 pr-10 py-2 border-2 dark:border-gray-700 border-gray-200 hover:border-gray-300 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Search Query / Channel URL / Username..." id="inpast"/>
+                                        <button class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-gray-900 transition-colors";" onclick="checkfunct(document.getElementById('inpast').value)">
+                                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16 w-5" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                            </svg>
+                                        </button>
+                                     <center><div onclick="location.href = `../youtube-subscriber-counter?cid=${document.getElementById('username').title}`;" style="cursor: pointer;">
+                        <img style="object-fit: cover;" title="" src="transparency.png" height="120" width="120"  id="userimg"><br>
+                        <span id="username" title="UCtYnQVonWkUM_i0vJXeTJog"></span>
+                    </div></center>
+                                    </div>
+                                    <div class="grid grid-cols-1  rounded-lg mt-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full py-1  mt-4" style="height:auto !important">
+                           
+                        </div>
+                    </div>
+                    <div class="mx-3 sm:mx-8 md:mx-24 lg:mx-26">
+                        <!--div>
+                            <p class="text-center text-2xl dark:text-gray-300">Promoted Users</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-5"></div>
+                            <a href="promote.html">
+                                <button class="mt-5 w-full border border-green-500 bg-white dark:bg-gray-1000 dark:hover:bg-gray-1100 rounded-md px-4 py-2 transition duration-500 ease select-none dark:text-gray-300 dark:hover:text-gray-100 text-black hover:text-white hover:bg-green-500 focus:outline-none focus:shadow-outline">
+                                    Promote your account / video to thousands of users per week.
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="money-bill" class="svg-inline--fa fa-money-bill fa-w-20 ml-1 w-5 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                        <path fill="currentColor" d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"></path>
+                                    </svg>
+                                </button>
+                            </a>
+                        </div-->
+                        
+                    </div>
+                    <div class="mt-10">
+                        <hr/>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+function checkfunct(cid) {
+    if(cid.startsWith("UC") == true) {
+        location.href = `../youtube-subscriber-counter?cid=${cid}`;
+    } else {
+        fetch('https://api.mgcounts.com/youtube/search/'+cid).then(res => res.json()).then(data => {
+            console.log(data)
+            if(data.id) {
+                document.getElementById('username').title = data.id
+            fetch('https://api.mgcounts.com/youtube/subscribers/'+data.id).then(res => res.json()).then(data => {
+                document.getElementById('userimg').src = data.image
+                document.getElementById('username').innerHTML = data.title
+            })
+            } else {
+                document.getElementById('username').title = 'Error Searching' 
+                document.getElementById('username').innerHTML = `pls search again` 
+            }
+            
+        })
+    }
+}
+     
+    </script>
+    </body>
+</html>

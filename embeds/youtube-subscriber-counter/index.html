@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title id="pog">Youtube Subscriber Counter Embed.</title>
+    <meta name="description" content="Customizable.">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://mixerno.space/jquery-3.1.1.min.js"></script>
+    <script src="https://mixerno.space/odometer.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="../../odometer.css">
+
+    <link rel="stylesheet" href="https://mixerno.space/bootstrap.css">
+    <script src="https://mixerno.space/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body onload="Start(window.location.href.split('?cid=')[1])">
+    <div class="embed-box">
+        <img id="image" src="../../favicon.ico" height="70" width="70">
+        <span id="name">Loading username</span>
+        <span id="count" class="odometer">0</span>
+    </div>
+</body>
+<style></style>
+
+<script src="../../customization/cus.js"></script>
+<script src="../../customization/checkver.js"></script>
+<script>
+    var embeds = {
+    setname: function(data) {
+        document.getElementById('name').innerHTML = data
+    },
+    setpic: function(data) {
+        document.getElementById('image').src = data
+    },
+    setcount: function(data) {
+        document.getElementById('count').innerHTML = data
+    },
+}
+    var a = new Date()
+    function Start(id) {
+        console.log("All Loaded! It took " + (new Date().getTime() - a.getTime()) / 1000 + ' Seconds');
+        GetData(id)
+        function GetData(cid) {
+            fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                if(!data.msg) {
+                    embeds.setname(data.name)
+                embeds.setpic(data.image)
+                embeds.setcount(Math.round(data.SubscriberCount))
+                EstApi()
+                } else {
+                    NormalApi(cid)
+                }
+            })
+        }
+        function NormalApi(uid) {
+            fetch('https://api.mixerno.space/youtube/channels/snippet/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                embeds.setname(data.items[0].snippet.title)
+                embeds.setpic(data.items[0].snippet.thumbnails.high.url)
+            })
+            fetch('https://api.mixerno.space/youtube/channels/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                embeds.setcount(Math.round(data.items[0].statistics.subscriberCount))
+                NormApi()
+            })
+        }
+        function EstApi() {
+            setInterval(function() {
+                fetch('https://api.mixerno.space/youtube/estimated/user/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                if(!data.msg) {
+                    embeds.setname(data.name)
+                embeds.setpic(data.image)
+                embeds.setcount(Math.round(data.SubscriberCount))
+                }
+            })
+            },2000);
+        }
+        function NormApi() {
+            setInterval(function() {
+                fetch('https://api.mixerno.space/youtube/channels/statistics/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                embeds.setcount(Math.round(data.items[0].statistics.subscriberCount))
+            })
+            },30000);
+        }
+        
+    }
+</script>
+
+</html>

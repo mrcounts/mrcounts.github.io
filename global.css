@@ -1,0 +1,383 @@
+@font-face {
+  font-family: Roboto Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: Roboto Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: Varela Round;
+    src: url(VarelaRound-Regular.ttf);
+}
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+#embedstuff {
+  width: 100%;
+  background-color: transparent;
+  text-align: center;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(255, 255, 255); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 255, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(36, 36, 36); 
+}
+body {
+    font-family: Varela Round !important;
+    background-color: black;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-x: hidden;
+    color:white
+  }
+  tspan,.highcharts-xaxis-labels,.highcharts-xaxis-labels,text {
+    color:white !important;
+    fill: white !important;
+    stroke: white !important;
+    stroke-width: 0 !important;
+  }
+
+  .highcharts-label-box {
+    color:black !important;
+    background-color:red !important;
+    fill: black !important;
+    stroke: black !important;
+    /*what the actual fuck*/
+  }
+  .highcharts-grid-line {
+    stroke-width: 0.5 !important;
+  }
+
+  #YTsubs,#YTsubs2 {
+    font-size: 100px !important;
+    transition: 0.3s;
+  }
+  #dif {
+    font-size: calc(1.5em + 1.2vw) !important;
+    transition: 0.3s;
+  }
+
+  #YTname,#YTname2 {
+    font-size: 32px !important;
+    transition: 0.3s;
+  }
+  #YTidentifier,#YTidentifier2 {
+    font-size: 0 !important;
+  }
+
+  #YTimg,#YTimg2 {
+
+    position: sticky;
+    width: 180 !important;
+    height: 180 !important;
+    border-radius: 50%;
+    border: groove white 0px;
+    z-index: 9999 !important;
+    object-fit: cover;
+    transition: 0.3s;
+
+  }
+  #YTimg:hover,#YTimg2:hover,#YTbanner:hover,#YTbanner2:hover {
+    border: groove lightblue 0px;
+    transition: 0.3s !important;
+    filter: blur(0px) !important;
+
+  }
+  #YTname:hover,#YTname2:hover,#thingy:hover,#thingy2:hover {
+    color:lightblue;
+    transition: 0.3s !important;
+
+  }
+  .funstuff {
+    margin-top: -90;
+    transition: 0.3s !important;
+  }
+  #YTbanner,#YTbanner2 {
+    position: sticky;
+    width: 100% !important;
+    height: 160 !important;
+    object-fit: cover;
+    transition: 0.3s;
+    z-index: -0 !important;
+    filter: blur(10px);
+    
+
+  }
+  #randomshitlmao {
+    background: rgb(0, 0, 0);
+width: 100%;
+height: 0px;
+text-align: center !important;
+font-family: Roboto Regular;
+font-size: 100%;
+color: rgb(255, 255, 255);
+transition: 0.3s !important;
+}
+.fhtg {
+    
+  display:flex;
+  align-items:center;
+justify-content: center;
+  
+      text-align: center !important;
+      transition: 0.3s !important;
+}
+.links {
+  position: absolute;
+  top:0%;
+  left:90% !important;
+  word-spacing: 5px;
+  transition: 0.3s !important;
+}
+.epiclinks:hover {
+  color: lightblue;
+}
+.epiclinks {
+  color:white;
+  transition: 0.3s;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.grid {
+grid-template-columns: repeat( auto-fit, minmax(20vh, 1fr) );
+transition: 0.3s !important;
+}
+.difgrid {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.difgrid {
+grid-template-columns: repeat( auto-fit, minmax(50vh, 1fr) );
+transition: 0.3s !important;
+}
+.grid2 {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.grid2 {
+  grid-template-columns: repeat( auto-fit, minmax(20vh, 1fr) );
+  transition: 0.3s !important;
+}
+.grid3 {
+  display: grid;
+  grid-gap: 2rem;
+  gap: 2rem;
+}
+.grid3 {
+  grid-template-columns: repeat( auto-fit, minmax(20vh, 1fr) );
+  transition: 0.3s !important;
+}
+  .uppercayts {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Roboto Medium;
+    transition: 0.3s !important;
+  }
+  #thingy,#thingy2 {
+    font-size: calc(0.5em + 0.5vw) !important;
+    transition: 0.3s !important;
+  }
+  #lolxd {
+    vertical-align:middle;
+    transition: 0.3s !important;
+  }
+
+  #channelidinput,
+  #buotn {
+    padding: 5px;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    border: groove white 1px;
+    transition: 0.3s !important;
+
+  }
+
+  #channelidinput {
+    width: 75%;
+    transition: 0.3s !important;
+
+  }
+
+  #buotn {
+    width: 25%;
+    transition: 0.3s !important;
+
+  }
+  .difgrid {
+    width: 90%;
+    transition: 0.3s !important;
+  }
+  #countbox {
+    background-color: black;
+    width: 95%;
+    padding: 10px;
+    border-color: rgba(55, 55, 55, 0.500);
+    border: 0.5px solid rgba(55,55,55,.500);
+    border-radius: .50rem;
+    transition: 0.3s !important;
+}
+  #disqus_thread {
+    background-color: black;
+    width: 95%;
+    padding: 10px;
+    border-color: darkviolet;
+    border: 1px solid darkviolet;
+    border-radius: .50rem;
+    transition: 0.3s !important;
+  }
+
+  }
+
+  #searchpart,
+  #graph,.buttosn {
+    background-color: black;
+    width: 90%;
+    padding: 10px;
+    border-color: rgba(55, 55, 55, 0.500);
+    border: 0.5px solid rgba(55,55,55,.500);
+    border-radius: .50rem;
+    transition: 0.3s !important;
+  }
+  .diffrne {
+    background-color: black;
+    width: 90%;
+    padding: 10px;
+    border-color: rgba(55, 55, 55, 0.500);
+    border: 0.5px solid rgba(55,55,55,.500);
+    border-radius: .50rem;
+    transition: 0.3s !important;
+  }
+  button {
+    padding: 10px !important;
+    background-color: black !important;
+    color: white !important;
+    -webkit-appearance: button !important;
+    border-color: red !important;
+    border: 2px solid red !important;
+    border-radius: .25rem !important;
+    width: 100% !important;
+    transition: 0.3s !important;
+  }
+  .grid3 .grid3 button {
+    height: 100%;
+    width: 100%;
+    transition: 0.3s !important;
+  }
+
+  button:hover {
+    background-color: lightpink !important;
+    color: lightred !important;
+    -webkit-appearance: button !important;
+    border-color: red !important;
+    border: 2px solid red !important;
+    transition: 0.3s !important;
+  }
+  .buton {
+    padding: 20px !important;
+    background-color: black !important;
+    color: white !important;
+    -webkit-appearance: button !important;
+    border-color: rgba(55, 55, 55, 0.500) !important;
+    border: 0.5px solid rgba(55,55,55,.500) !important;
+    border-radius: .50rem !important;
+    width: 100% !important;
+    transition: 0.3s !important;
+  }
+
+  .buton:hover {
+    background-color: rgb(64, 64, 64) !important;
+    color: lightblue !important;
+    -webkit-appearance: button !important;
+    border-color: rgba(110,110,110, 0.500) !important;
+    border: 0.5px solid rgba(110,110,110,.500) !important;
+    transition: 0.3s !important;
+  }
+
+  #countbox2 {
+    /*background-color: rgb(255, 255, 255);*/
+    width: 95%;
+    padding: 0;
+    /*display: flex;
+    flex-direction: row;
+    justify-content: space-between;*/
+    flex: 4;
+    margin: 0;
+    transition: 0.3s !important;
+
+  }
+
+  .countbox3 {
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    width: 100%;
+    border-color: rgba(55, 55, 55, 0.500);
+    border: 0.5px solid rgba(55,55,55,.500);
+    border-radius: .50rem;
+    transition: 0.3s !important;
+
+  }
+
+  .countbox3 .fsize {
+    font-size: 2.5rem !important;
+    transition: 0.3s !important;
+
+  }
+  .countbox3 .fsize2 {
+    font-size: 1.5rem !important;
+    transition: 0.3s !important;
+
+  }
+  
+  .countbox3x {
+    margin: 0;
+    padding: 10px;
+    background-color: black;
+    width: 100%;
+    border-color: rgba(55, 55, 55, 0.500);
+    border: 0.5px solid rgba(55,55,55,.500);
+    border-radius: .50rem;
+    transition: 0.3s !important;
+
+  }
+
+  .uppercayts,a {
+    color:white !important;
+    transition: 0.3s !important;
+  }
+  
+  .about {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    font-weight: 100 !important;
+    border-color: lightgreen;
+    border: 0.5px solid lightgreen;
+    border-radius: .50rem;
+    transition: 0.3s !important;
+  }

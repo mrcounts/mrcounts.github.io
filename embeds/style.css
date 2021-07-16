@@ -1,0 +1,37 @@
+@font-face {
+  font-family: Varela Round;
+    src: url(../fonts/VarelaRound-Regular.ttf);
+}
+
+body {
+    margin: 0;
+}
+#image {
+    position: absolute;
+    top: 0%;
+    left:0%;
+}
+#name {
+    position: absolute;
+    top: 0%;
+    left: 70;
+    font-size: 20px;
+    width: 245px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#count {
+    position: absolute;
+    top:25px;
+    left: 70;
+    font-size: 35px;
+    width: 300px !important;
+}
+body {
+    background-color:transparent;
+    font-family: Varela Round;
+}
+#arc-icon, .is-visible {
+    display: none !important;
+}

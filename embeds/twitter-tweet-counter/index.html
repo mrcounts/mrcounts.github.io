@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <title id="pog">Twitter Tweet Like Counter Embed.</title>
+    <meta name="description" content="Customizable.">
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://mixerno.space/jquery-3.1.1.min.js"></script>
+    <script src="https://mixerno.space/odometer.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <link rel="stylesheet" href="../../odometer.css">
+
+    <link rel="stylesheet" href="https://mixerno.space/bootstrap.css">
+    <script src="https://mixerno.space/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="../style.css">
+  
+</head>
+
+<body onload="Start(window.location.href.split('?cid=')[1])">
+    <div class="embed-box">
+        <img id="image" src="../../favicon.ico" height="70" width="70">
+        <span id="name">Loading username</span>
+        <span id="count" class="odometer">0</span>
+    </div>
+</body>
+<style></style>
+
+<script src="../../customization/cus.js"></script>
+<script src="../../customization/checkver.js"></script>
+<script>
+    var embeds = {
+    setname: function(data) {
+        document.getElementById('name').innerHTML = data
+    },
+    setpic: function(data) {
+        document.getElementById('image').src = data
+    },
+    setcount: function(data) {
+        document.getElementById('count').innerHTML = data
+    },
+}
+    var a = new Date()
+    function Start(id) {
+        console.log("All Loaded! It took " + (new Date().getTime() - a.getTime()) / 1000 + ' Seconds');
+        GetData(id)
+        function GetData(cid) {
+            NormalApi(cid)
+        }
+        function NormalApi(uid) {
+            fetch('https://api.mixerno.space/twitter/tweet/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                embeds.setname(data.user.name)
+                embeds.setpic((data.user.profile_image_url_https).replace(/normal/, '400x400'))
+                embeds.setcount(Math.round(data.favorite_count))
+                NormApi()
+            })
+        }
+        function NormApi() {
+            setInterval(function() {
+                fetch('https://api.mixerno.space/twitter/tweet/' + window.location.href.split('?cid=')[1]).then(res => res.json()).then(data => {
+                console.log(data)
+                embeds.setcount(Math.round(data.favorite_count))
+            })
+            },4000);
+        }
+        
+    }
+    /*fetch('https://api.mixerno.space/youtube/videoid/livestreamingDetails/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].liveStreamingDetails) {
+        console.log("Api Error.")
+        stream = false
+        others()
+      } else {
+        if (!json.items[0].liveStreamingDetails.concurrentViewers) {
+          console.log("Api Error.")
+          stream = false
+          others()
+        } else {
+
+          YT.setsubs(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers))
+          YT.setgoal(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+          YT.setgraphpoint(parseFloat(Math.floor(json.items[0].liveStreamingDetails.concurrentViewers)))
+          others()
+        }
+      }
+    })
+    function others() {
+
+    }
+    fetch('https://api.mixerno.space/youtube/videoid/statistics/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].statistics.viewCount) {
+        console.log("Api Error.")
+
+      } else {
+        if (stream == true) {
+          document.getElementById('thingy').innerHTML = "Viewers"
+        } else {
+          document.getElementById('thingy').innerHTML = "Views"
+          YT.setsubs(Math.floor(json.items[0].statistics.viewCount))
+          YT.setgoal(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+          YT.setgraphpoint(parseFloat(Math.floor(json.items[0].statistics.viewCount)))
+        }
+        YT.setlikes(Math.floor(json.items[0].statistics.likeCount))
+        YT.setdislikes(Math.floor(json.items[0].statistics.dislikeCount))
+        if (stream == true) {
+          viewsorcomments.innerHTML = "Views"
+          YT.setcomments(Math.floor(json.items[0].statistics.viewCount))
+        } else {
+          viewsorcomments.innerHTML = "Comments"
+          YT.setcomments(Math.floor(json.items[0].statistics.commentCount))
+        }
+        StartTheWait()
+      }
+    })
+    //console.log(id)sear
+
+    fetch('https://api.mixerno.space/youtube/videoid/snippet/' + id).then(res => res.json()).then(data => {
+      //console.log(data)
+      var json = data
+      estimated = false
+      if (!json.items[0].snippet.title) {
+        console.log("Api Error.")
+
+      } else {
+        YT.setname(json.items[0].snippet.title)
+        YT.setpicture(json.items[0].snippet.thumbnails.maxres.url)
+        YT.setbanner(json.items[0].snippet.thumbnails.maxres.url)
+        YT.setid(window.location.href.split('?cid=')[1])
+        YT.setdesc(json.items[0].snippet.description)
+      }
+    })*/
+</script>
+
+</html>
