@@ -1,0 +1,181 @@
+@font-face {
+    font-family: Roboto Regular;
+      src: url(fonts/Roboto-Regular.ttf);
+  }
+  @font-face {
+    font-family: Roboto Medium;
+      src: url(fonts/Roboto-Medium.ttf);
+  }
+  @font-face {
+    font-family: Roboto Light ;
+      src: url(fonts/Roboto-Light.ttf);
+  }
+  @font-face {
+    font-family: Varela Round;
+      src: url(VarelaRound-Regular.ttf);
+  }
+  body {
+      margin: 0;
+      background-color: black;
+      color:white;
+      font-family: Roboto Medium;
+      overflow-x: hidden;
+  }
+  .searchbox,.popusrts {
+      background-color: black;
+      width: 90%;
+      padding: 10px;
+      border-color: rgba(0, 0, 0, 0.500);
+      border: 0.5px solid rgba(0,0,0,.500);
+      border-radius: .50rem;
+  }
+  .popusrts .grid .abox img:hover {
+    width: 150 !important;
+    height: 150 !important;
+    transition: 0.3s;
+  }
+  .popusrts .grid .abox {
+    background-color: black;
+    padding: 10px;
+    border-color: rgba(0, 0, 0, 0.500);
+    border: 0.5px solid rgba(0,0,0,.500);
+    border-radius: .25rem;
+    max-width: 200px;
+    min-width: 150px;
+    max-height: 200px;
+    min-height: 150px;
+    transition: 0.3s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  div.searchbox div div img:hover {
+    width: 150 !important;
+    height: 150 !important;
+    transition: 0.3s;
+  }
+  #randomshitlmao {
+    background: rgb(0, 0, 0);
+width: 100%;
+height: 0px;
+text-align: center !important;
+font-family: Roboto Regular;
+font-size: 100%;
+color: black;
+}
+
+.fhtg {
+    
+  display:flex;
+  align-items:center;
+justify-content: center;
+  
+      text-align: center !important;
+}
+input[type=text]:hover,button:hover,select:hover,option:hover {
+      color:lightblue !important;
+}
+button, input {
+  transition: 0.3s;
+}
+.links {
+  position: absolute;
+  text-decoration: none;
+  top:0%;
+  left:90% !important;
+  word-spacing: 5px;
+}
+div#randomshitlmao div .links a {
+
+  text-decoration: none;
+}
+.epiclinks:hover {
+  color: lightblue;
+}
+.epiclinks {
+  color:white;
+  transition: 0.3s;
+}
+   input[type=text],button,select,option {
+      background-color: rgb(22, 22, 22) !important;
+      color:white !important;
+      transition: 0.3s;
+  }
+  button {
+    cursor: pointer;
+  }
+  .grid3 {
+    display: grid;
+    grid-gap: 2rem;
+    gap: 2rem;
+  }
+  .grid3 {
+    grid-template-columns: repeat(5,minmax(0,1fr));
+  }
+  .grid {
+    display: grid;
+    grid-gap: 2px;
+    gap: 2px;
+  }
+.grid {
+    grid-template-columns: repeat( auto-fit, minmax(200px, 2fr) );
+}
+.img {
+  
+  border-radius: 50% !important;
+  border: groove white 0px !important;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#userimg,#userimg2 {
+  border: groove white 0px !important;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+#username,#username2 {
+  transition: 0.3s;
+}
+h4 {
+ 
+  cursor: pointer;
+  transition: 0.3s;
+}
+.img:hover {
+  border-color: lightblue !important;
+}
+h4:hover {
+ color:lightblue !important;
+}
+#userimg:hover,#userimg2:hover {
+  border-color: lightblue !important;
+}
+#username:hover,#username2:hover {
+ color:lightblue !important;
+}
+.abox {
+  cursor: pointer;
+}
+.comp-grid {
+  display: grid;
+  grid-gap: 2px;
+  gap: 2px;
+}
+.comp-grid {
+  grid-template-columns: repeat( auto-fit, minmax(400px, 2fr) );
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(255, 255, 255); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 255, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(36, 36, 36); 
+}
